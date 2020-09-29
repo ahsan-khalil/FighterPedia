@@ -36,7 +36,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.062455125153064728" green="0.046851851046085358" blue="0.16908887028694153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="07y-s5-v07" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="HHY-mE-fc3"/>
                             <constraint firstItem="gGl-LA-Huv" firstAttribute="top" secondItem="07y-s5-v07" secondAttribute="bottom" constant="8" symbolic="YES" id="Lpw-Ee-bo7"/>

@@ -7,11 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet var btnList: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        for btn in btnList {
+            btn.layer.cornerRadius  = 10
+        }
+        
+        labelTitle.layer.masksToBounds = true
+        labelTitle.layer.cornerRadius = 10
+        
     }
 
 

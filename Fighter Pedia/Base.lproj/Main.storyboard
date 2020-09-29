@@ -1,24 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iG-n1-AmN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-NU-Cq4">
+                                <rect key="frame" x="35" y="235" width="126" height="53"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="33"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Name">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTm-u3-Wf3">
+                                <rect key="frame" x="253" y="235" width="126" height="53"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="Lsx-FK-gJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="33"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Eras">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Ts-dod">
+                                <rect key="frame" x="50" y="323" width="314" height="75"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="rPU-2F-Gfh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Compare Fighters">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VOH-27-18j">
+                                <rect key="frame" x="50" y="433" width="314" height="75"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="pFJ-7d-O7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Wallpapers">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dMI-9q-nsA">
+                                <rect key="frame" x="50" y="543" width="314" height="75"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="zm9-ef-EuL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Glossary">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QhD-wQ-1Rf">
+                                <rect key="frame" x="50" y="653" width="314" height="75"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="lfN-5u-MBg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Guess the Plane">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-k6-m2Y">
+                                <rect key="frame" x="50" y="763" width="314" height="75"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="euj-y9-8mb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Credits">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIT-Yp-5Nk">
+                                <rect key="frame" x="50" y="120" width="314" height="60"/>
+                                <color key="backgroundColor" red="0.96592551469802856" green="0.98531264066696167" blue="0.98845762014389038" alpha="0.046714469178082189" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BF6-AW-26q"/>
+                                    <constraint firstAttribute="width" constant="314" id="Paa-bB-Xrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dMI-9q-nsA" firstAttribute="top" secondItem="VOH-27-18j" secondAttribute="bottom" constant="35" id="Et7-ZH-EQi"/>
+                            <constraint firstItem="daU-Ts-dod" firstAttribute="top" secondItem="Tyi-NU-Cq4" secondAttribute="bottom" constant="35" id="Hlz-pY-Lyr"/>
+                            <constraint firstItem="Tyi-NU-Cq4" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="OZd-5r-Qa3"/>
+                            <constraint firstItem="daU-Ts-dod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Oj9-hB-UIk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dMI-9q-nsA" secondAttribute="trailing" constant="50" id="Ozh-h8-v0d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s2d-k6-m2Y" secondAttribute="trailing" constant="50" id="Prw-Ih-PH0"/>
+                            <constraint firstItem="QhD-wQ-1Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="QzX-Yy-XCE"/>
+                            <constraint firstItem="VOH-27-18j" firstAttribute="top" secondItem="daU-Ts-dod" secondAttribute="bottom" constant="35" id="Voh-Hl-i37"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="daU-Ts-dod" secondAttribute="trailing" constant="50" id="Y3h-y8-yk0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OIT-Yp-5Nk" secondAttribute="trailing" constant="50" id="aFt-sv-isC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QhD-wQ-1Rf" secondAttribute="trailing" constant="50" id="ajO-Fq-dH0"/>
+                            <constraint firstItem="OIT-Yp-5Nk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="b3r-S0-s11"/>
+                            <constraint firstItem="QhD-wQ-1Rf" firstAttribute="top" secondItem="dMI-9q-nsA" secondAttribute="bottom" constant="35" id="eNP-Of-SNi"/>
+                            <constraint firstItem="s2d-k6-m2Y" firstAttribute="top" secondItem="QhD-wQ-1Rf" secondAttribute="bottom" constant="35" id="fV5-2p-s62"/>
+                            <constraint firstItem="Tyi-NU-Cq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="hrI-J0-GwN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VOH-27-18j" secondAttribute="trailing" constant="50" id="ifc-YX-rNw"/>
+                            <constraint firstItem="dMI-9q-nsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kOg-6R-Adz"/>
+                            <constraint firstItem="s2d-k6-m2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="rFZ-vl-Uvl"/>
+                            <constraint firstItem="OIT-Yp-5Nk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xY7-SK-mGM"/>
+                            <constraint firstItem="VOH-27-18j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="xwC-d1-MXd"/>
+                            <constraint firstItem="LTm-u3-Wf3" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="zil-4w-nX2"/>
+                            <constraint firstItem="OIT-Yp-5Nk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="znB-L2-C6v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTm-u3-Wf3" secondAttribute="trailing" constant="35" id="zyd-gU-XQm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YHn-rU-F5t"/>
+                    <connections>
+                        <outlet property="labelTitle" destination="OIT-Yp-5Nk" id="I0I-8Y-GSb"/>
+                        <outletCollection property="btnList" destination="Tyi-NU-Cq4" collectionClass="NSMutableArray" id="Xk2-ZG-Fy9"/>
+                        <outletCollection property="btnList" destination="LTm-u3-Wf3" collectionClass="NSMutableArray" id="Hkr-7p-yj2"/>
+                        <outletCollection property="btnList" destination="daU-Ts-dod" collectionClass="NSMutableArray" id="p0Z-n7-TkU"/>
+                        <outletCollection property="btnList" destination="VOH-27-18j" collectionClass="NSMutableArray" id="0YF-7v-448"/>
+                        <outletCollection property="btnList" destination="dMI-9q-nsA" collectionClass="NSMutableArray" id="lRR-un-vMe"/>
+                        <outletCollection property="btnList" destination="QhD-wQ-1Rf" collectionClass="NSMutableArray" id="ENF-CS-6A8"/>
+                        <outletCollection property="btnList" destination="s2d-k6-m2Y" collectionClass="NSMutableArray" id="TnP-cV-cqG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="573.91304347826087" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fyc-zD-ovv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4iG-n1-AmN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="X6R-Fo-yti">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MHZ-cE-QW6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbf-ZU-HtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
