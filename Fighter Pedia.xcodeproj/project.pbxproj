@@ -13,6 +13,9 @@
 		8B3D0B1725231B8400E3408C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B1525231B8400E3408C /* Main.storyboard */; };
 		8B3D0B1925231B8500E3408C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B1825231B8500E3408C /* Assets.xcassets */; };
 		8B3D0B1C25231B8500E3408C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B1A25231B8500E3408C /* LaunchScreen.storyboard */; };
+		8B3D0B28252463F700E3408C /* ErasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B26252463F700E3408C /* ErasTableViewCell.swift */; };
+		8B3D0B29252463F700E3408C /* ErasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B27252463F700E3408C /* ErasTableViewCell.xib */; };
+		8B3D0B2D2524689800E3408C /* ErasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B2C2524689800E3408C /* ErasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8B3D0B1825231B8500E3408C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3D0B1B25231B8500E3408C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3D0B1D25231B8500E3408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3D0B26252463F700E3408C /* ErasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasTableViewCell.swift; sourceTree = "<group>"; };
+		8B3D0B27252463F700E3408C /* ErasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErasTableViewCell.xib; sourceTree = "<group>"; };
+		8B3D0B2C2524689800E3408C /* ErasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		8B3D0B0E25231B8400E3408C /* Fighter Pedia */ = {
 			isa = PBXGroup;
 			children = (
+				8B3D0B2525245DAB00E3408C /* Eras */,
 				8B3D0B0F25231B8400E3408C /* AppDelegate.swift */,
 				8B3D0B1125231B8400E3408C /* SceneDelegate.swift */,
 				8B3D0B1325231B8400E3408C /* ViewController.swift */,
@@ -65,6 +72,16 @@
 				8B3D0B1D25231B8500E3408C /* Info.plist */,
 			);
 			path = "Fighter Pedia";
+			sourceTree = "<group>";
+		};
+		8B3D0B2525245DAB00E3408C /* Eras */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D0B26252463F700E3408C /* ErasTableViewCell.swift */,
+				8B3D0B27252463F700E3408C /* ErasTableViewCell.xib */,
+				8B3D0B2C2524689800E3408C /* ErasViewController.swift */,
+			);
+			path = Eras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3D0B29252463F700E3408C /* ErasTableViewCell.xib in Resources */,
 				8B3D0B1C25231B8500E3408C /* LaunchScreen.storyboard in Resources */,
 				8B3D0B1925231B8500E3408C /* Assets.xcassets in Resources */,
 				8B3D0B1725231B8400E3408C /* Main.storyboard in Resources */,
@@ -137,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3D0B28252463F700E3408C /* ErasTableViewCell.swift in Sources */,
 				8B3D0B1425231B8400E3408C /* ViewController.swift in Sources */,
+				8B3D0B2D2524689800E3408C /* ErasViewController.swift in Sources */,
 				8B3D0B1025231B8400E3408C /* AppDelegate.swift in Sources */,
 				8B3D0B1225231B8400E3408C /* SceneDelegate.swift in Sources */,
 			);

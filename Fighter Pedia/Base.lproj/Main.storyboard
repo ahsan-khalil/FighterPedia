@@ -30,6 +30,9 @@
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <segue destination="9wd-Cu-h4l" kind="show" id="cca-iB-AWQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTm-u3-Wf3">
                                 <rect key="frame" x="214" y="235" width="120" height="60"/>
@@ -44,9 +47,12 @@
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClickEras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sl1-C7-r6F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Ts-dod">
-                                <rect key="frame" x="103" y="323" width="224" height="60"/>
+                                <rect key="frame" x="103" y="315" width="224" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="841-uS-cIs"/>
@@ -60,7 +66,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VOH-27-18j">
-                                <rect key="frame" x="103" y="403" width="224" height="60"/>
+                                <rect key="frame" x="103" y="395" width="224" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="83L-du-qEd"/>
@@ -74,7 +80,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dMI-9q-nsA">
-                                <rect key="frame" x="103" y="483" width="224" height="60"/>
+                                <rect key="frame" x="103" y="475" width="224" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YsX-Rl-nbQ"/>
@@ -88,7 +94,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QhD-wQ-1Rf">
-                                <rect key="frame" x="103" y="563" width="224" height="60"/>
+                                <rect key="frame" x="103" y="555" width="224" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="RJS-Si-8Jh"/>
@@ -102,7 +108,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-k6-m2Y">
-                                <rect key="frame" x="103" y="643" width="224" height="60"/>
+                                <rect key="frame" x="103" y="635" width="224" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="W1D-Da-otL"/>
@@ -138,7 +144,7 @@
                             <constraint firstItem="VOH-27-18j" firstAttribute="top" secondItem="daU-Ts-dod" secondAttribute="bottom" constant="20" id="Buo-JC-hQD"/>
                             <constraint firstItem="daU-Ts-dod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="IRw-Bt-Qac"/>
                             <constraint firstItem="s2d-k6-m2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="JTi-QO-nUn"/>
-                            <constraint firstItem="daU-Ts-dod" firstAttribute="top" secondItem="Tyi-NU-Cq4" secondAttribute="bottom" constant="28" id="NMi-hM-dnj"/>
+                            <constraint firstItem="daU-Ts-dod" firstAttribute="top" secondItem="Tyi-NU-Cq4" secondAttribute="bottom" constant="20" id="NMi-hM-dnj"/>
                             <constraint firstItem="Tyi-NU-Cq4" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="OZd-5r-Qa3"/>
                             <constraint firstItem="s2d-k6-m2Y" firstAttribute="top" secondItem="QhD-wQ-1Rf" secondAttribute="bottom" constant="20" id="UQ0-Ps-kJG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OIT-Yp-5Nk" secondAttribute="trailing" constant="50" id="aFt-sv-isC"/>
@@ -170,6 +176,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573.91304347826087" y="103.79464285714285"/>
+        </scene>
+        <!--Eras-->
+        <scene sceneID="6Ij-8q-gOz">
+            <objects>
+                <viewController storyboardIdentifier="ErasViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DLI-7b-eLF" customClass="ErasViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ABf-Nb-aFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YEB-jT-uI9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <color key="separatorColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sya-a5-D2i"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sya-a5-D2i" firstAttribute="trailing" secondItem="YEB-jT-uI9" secondAttribute="trailing" id="2af-kO-JKv"/>
+                            <constraint firstItem="sya-a5-D2i" firstAttribute="bottom" secondItem="YEB-jT-uI9" secondAttribute="bottom" id="DIS-f4-vmg"/>
+                            <constraint firstItem="YEB-jT-uI9" firstAttribute="top" secondItem="sya-a5-D2i" secondAttribute="top" id="Euc-Y9-MsT"/>
+                            <constraint firstItem="YEB-jT-uI9" firstAttribute="leading" secondItem="sya-a5-D2i" secondAttribute="leading" id="RGe-Oy-XCH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Eras" id="5TD-x2-0l5"/>
+                    <connections>
+                        <outlet property="erasTableView" destination="YEB-jT-uI9" id="xMe-v4-bKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQx-iQ-cik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="790"/>
+        </scene>
+        <!--Fighter Collection-->
+        <scene sceneID="m4r-I8-EtK">
+            <objects>
+                <viewController id="9wd-Cu-h4l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QB1-Fv-0hH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="axg-z1-zF2"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fighter Collection" id="nXc-w5-xsG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fex-QM-a5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fyc-zD-ovv">
