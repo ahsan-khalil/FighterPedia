@@ -51,6 +51,13 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func onClickNameBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: FighterCollectionViewController.reuseIdentifier) as! FighterCollectionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 
 }
 

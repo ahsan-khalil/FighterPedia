@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9wd-Cu-h4l" kind="show" id="cca-iB-AWQ"/>
+                                    <action selector="onClickNameBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDY-7e-Q5I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTm-u3-Wf3">
@@ -214,18 +215,49 @@
         <!--Fighter Collection-->
         <scene sceneID="m4r-I8-EtK">
             <objects>
-                <viewController id="9wd-Cu-h4l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FighterCollectionViewController" title="Fighter Collection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9wd-Cu-h4l" customClass="FighterCollectionViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QB1-Fv-0hH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-8P-o9z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.96851962804794312" green="0.96638709306716919" blue="0.98489159345626831" alpha="0.14742080479452055" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xZc-hj-GWZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G5O-Mp-z3K">
+                                        <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yAO-hX-Wn9">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="axg-z1-zF2"/>
                         <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gEJ-8P-o9z" firstAttribute="leading" secondItem="axg-z1-zF2" secondAttribute="leading" id="KIV-CK-TIs"/>
+                            <constraint firstItem="axg-z1-zF2" firstAttribute="trailing" secondItem="gEJ-8P-o9z" secondAttribute="trailing" id="Xz1-r9-CO0"/>
+                            <constraint firstItem="gEJ-8P-o9z" firstAttribute="top" secondItem="axg-z1-zF2" secondAttribute="top" id="brd-sZ-6D2"/>
+                            <constraint firstItem="axg-z1-zF2" firstAttribute="bottom" secondItem="gEJ-8P-o9z" secondAttribute="bottom" constant="-34" id="d4d-YQ-R4c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fighter Collection" id="nXc-w5-xsG"/>
+                    <connections>
+                        <outlet property="fighterCollectionView" destination="gEJ-8P-o9z" id="L7m-Q8-0xM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fex-QM-a5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="104"/>
+            <point key="canvasLocation" x="1421.7391304347827" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fyc-zD-ovv">
