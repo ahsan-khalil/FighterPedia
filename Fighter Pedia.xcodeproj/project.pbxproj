@@ -19,6 +19,8 @@
 		8B3D0B312524BC9400E3408C /* FighterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B302524BC9400E3408C /* FighterCollectionViewController.swift */; };
 		8B3D0B442524C5C300E3408C /* FighterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B422524C5C300E3408C /* FighterCollectionViewCell.swift */; };
 		8B3D0B452524C5C300E3408C /* FighterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B432524C5C300E3408C /* FighterCollectionViewCell.xib */; };
+		8B3D0B4A2525B71C00E3408C /* FighterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */; };
+		8B3D0B4D2525BB9000E3408C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		8B3D0B302524BC9400E3408C /* FighterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterCollectionViewController.swift; sourceTree = "<group>"; };
 		8B3D0B422524C5C300E3408C /* FighterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B3D0B432524C5C300E3408C /* FighterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FighterCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterDetailViewController.swift; sourceTree = "<group>"; };
+		8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		8B3D0B0E25231B8400E3408C /* Fighter Pedia */ = {
 			isa = PBXGroup;
 			children = (
+				8B3D0B472525B66E00E3408C /* FighterDetail */,
 				8B3D0B2F2524BC7100E3408C /* FighterCollection */,
 				8B3D0B2525245DAB00E3408C /* Eras */,
 				8B3D0B0F25231B8400E3408C /* AppDelegate.swift */,
@@ -99,6 +104,15 @@
 				8B3D0B432524C5C300E3408C /* FighterCollectionViewCell.xib */,
 			);
 			path = FighterCollection;
+			sourceTree = "<group>";
+		};
+		8B3D0B472525B66E00E3408C /* FighterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */,
+				8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */,
+			);
+			path = FighterDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +192,8 @@
 				8B3D0B312524BC9400E3408C /* FighterCollectionViewController.swift in Sources */,
 				8B3D0B2D2524689800E3408C /* ErasViewController.swift in Sources */,
 				8B3D0B1025231B8400E3408C /* AppDelegate.swift in Sources */,
+				8B3D0B4A2525B71C00E3408C /* FighterDetailViewController.swift in Sources */,
+				8B3D0B4D2525BB9000E3408C /* ImageCollectionViewCell.swift in Sources */,
 				8B3D0B442524C5C300E3408C /* FighterCollectionViewCell.swift in Sources */,
 				8B3D0B1225231B8400E3408C /* SceneDelegate.swift in Sources */,
 			);
