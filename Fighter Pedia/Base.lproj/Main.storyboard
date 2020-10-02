@@ -270,21 +270,21 @@
                                     <constraint firstAttribute="width" constant="248" id="j4u-7q-f7w"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Ui-RN-Xbi">
-                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="itemSize" width="38" height="38"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="6" minY="5" maxX="6" maxY="6"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ImageCollectionViewCell1" reuseIdentifier="ImageCollectionViewCell" id="WdI-6r-a8J" customClass="ImageCollectionViewCell" customModule="Fighter_Pedia" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="6" y="6" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="87j-V6-8vu">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="M1f-ic-Pth">
-                                                    <rect key="frame" x="1.5" y="1.5" width="37" height="36.5"/>
+                                                    <rect key="frame" x="1.5" y="1.5" width="35" height="34.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="27" id="2JS-X1-F3b"/>
                                                     </constraints>
@@ -299,7 +299,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="40" height="40"/>
+                                        <size key="customSize" width="38" height="38"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -328,7 +328,7 @@
                                         <state key="normal" title="General Information"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-Cn-i86">
-                                        <rect key="frame" x="15" y="91" width="344" height="45"/>
+                                        <rect key="frame" x="15" y="90" width="344" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.79149347543716431" green="0.83329784870147705" blue="0.94905096292495728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
@@ -374,6 +374,10 @@
                     <connections>
                         <outlet property="FighterOperatorsCollectionView" destination="cDc-Uq-wRX" id="g93-0M-pdj"/>
                         <outlet property="fighterPicsCollectionView" destination="rOD-15-GfE" id="JHn-Ws-YOe"/>
+                        <outlet property="viewFighterInfoBG" destination="1NX-Jo-yUd" id="mAq-bM-6g6"/>
+                        <outletCollection property="btnCollection" destination="CVq-ls-CRn" collectionClass="NSMutableArray" id="CsJ-hq-kKW"/>
+                        <outletCollection property="btnCollection" destination="QPZ-Cn-i86" collectionClass="NSMutableArray" id="jUB-dQ-Rg8"/>
+                        <outletCollection property="btnCollection" destination="hsV-ES-RVy" collectionClass="NSMutableArray" id="0kR-zl-pxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kto-FL-50c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
