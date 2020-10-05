@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageSliderCollectionViewCell" id="gTV-IL-0wX" customClass="ImageSliderCollectionViewCell" customModule="Fighter_Pedia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="149"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Sxb-M1-knx">
+                        <rect key="frame" x="3" y="3" width="405" height="143"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.96919864416122437" green="0.9374387264251709" blue="0.97754007577896118" alpha="0.10241866438356165" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Sxb-M1-knx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="4ln-pK-G5g"/>
+                <constraint firstAttribute="trailing" secondItem="Sxb-M1-knx" secondAttribute="trailing" constant="3" id="7j5-rw-szX"/>
+                <constraint firstAttribute="bottom" secondItem="Sxb-M1-knx" secondAttribute="bottom" constant="3" id="ZPX-QP-wpB"/>
+                <constraint firstItem="Sxb-M1-knx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="eUz-nn-1pq"/>
+            </constraints>
+            <size key="customSize" width="411" height="149"/>
+            <connections>
+                <outlet property="image" destination="Sxb-M1-knx" id="t62-RY-VKE"/>
+            </connections>
+            <point key="canvasLocation" x="402.17391304347831" y="134.93303571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="appLogo" width="640" height="480"/>
+    </resources>
+</document>

@@ -7,10 +7,6 @@
 
 import UIKit
 
-struct ErasYearRangeModel {
-    var StartYear:Int
-    var EndYear:Int
-}
 
 class ErasViewController: UIViewController {
 
@@ -48,6 +44,10 @@ extension ErasViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("i was touched")
         let vc = storyboard?.instantiateViewController(identifier: FighterCollectionViewController.reuseIdentifier) as! FighterCollectionViewController
+        let tempRange = dateRangeList[indexPath.row]
+        
+        vc.setFighterList(fighterList: FighterRepository.getFightersInYearsRange(StartYear: tempRange.StartYear, EndYear: tempRange.EndYear))
+        vc.title = "Collection (\(tempRange.StartYear) - \(tempRange.EndYear))"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

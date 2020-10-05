@@ -19,11 +19,16 @@ class FighterDetailViewController: UIViewController {
     @IBOutlet weak var viewFighterInfoBG: UIView!
     @IBOutlet var btnCollection: [UIButton]!
     
-    enum CollectionViewTag:Int {
-        case picCollectionViewTag = 1
-        case flagCollectionViewTag = 2
-    }
     
+    
+    var selectedFighter:Fighter!
+    
+    let picCollectionViewTag = 1
+    let flagCollectionViewTag = 2
+    
+    @IBOutlet weak var btnGeneralInfo: UIButton!
+    @IBOutlet weak var btnGeneralCharacteristics: UIButton!
+    @IBOutlet weak var btnPerformance: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,52 +36,96 @@ class FighterDetailViewController: UIViewController {
         fighterPicsCollectionView.dataSource = self
         FighterOperatorsCollectionView.delegate = self
         FighterOperatorsCollectionView.dataSource = self
-        
         fighterPicsCollectionView.layer.cornerRadius = 5
         FighterOperatorsCollectionView.layer.cornerRadius = 3
         viewFighterInfoBG.layer.cornerRadius = 5
         viewFighterInfoBG.layer.borderWidth = 2
         viewFighterInfoBG.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
+        fighterPicsCollectionView.tag = 1
+        FighterOperatorsCollectionView.tag = 2
+        
+        fighterPicsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
+        FighterOperatorsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
+        
+        
         for btn in btnCollection {
             btn.layer.cornerRadius = 3
         }
         
+        if selectedFighter == nil {
+            print("you are idiot")
+            navigationController?.popViewController(animated: true)
+        }else{
+            navigationItem.title = selectedFighter.flightname
+            
+            
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(moreInfo))
+        }
         
-        self.title = "Fighter Information"
-        
-        navigationItem.title = "Fighter Information"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(moreInfo))
        
     }
     
     @objc func moreInfo(){
         print("right button tapped")
     }
+    
+    @IBAction func onClickGeneralInfo(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
+        print("clicked1")
+        vc.title = "General Information"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func onClickGeneralCharacteristics(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
+        print("clicked2")
+        vc.title = "General Characteristics"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func onClickPerformance(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
+        print("clicked3")
+        vc.title = "Performance"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }
 
 
 extension FighterDetailViewController:UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 8
+        if(collectionView.tag == picCollectionViewTag){
+            return selectedFighter.picturesList.count
+        }else {
+            return selectedFighter.flightOperatorsList.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //if(collectionView == self.fighterPicsCollectionView){
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.resuseIdentifier, for: indexPath) as! ImageCollectionViewCell
-        cell.layer.borderWidth = 3
-        cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        return cell
+        if(collectionView.tag == picCollectionViewTag){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+            cell.configure(image: selectedFighter.picturesList[indexPath.row])
+            cell.layer.borderWidth = 3
+            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+            cell.layer.borderWidth = 1
+            cell.layer.cornerRadius = 17
+            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            let flagName = selectedFighter.flightOperatorsList[indexPath.row].countryName
+//            let flagPath = (Utility.flagsPath[flagName])?.lowercased() ?? "pakistan"
+            cell.configure(image: flagName.lowercased())
+            
+            return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("you touched me \(indexPath.row)")
     }
-    
-    
-    
-    
     
 }

@@ -20,7 +20,17 @@
 		8B3D0B442524C5C300E3408C /* FighterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B422524C5C300E3408C /* FighterCollectionViewCell.swift */; };
 		8B3D0B452524C5C300E3408C /* FighterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D0B432524C5C300E3408C /* FighterCollectionViewCell.xib */; };
 		8B3D0B4A2525B71C00E3408C /* FighterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */; };
-		8B3D0B4D2525BB9000E3408C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */; };
+		8BA405942527628900405482 /* GeneralInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA405922527628900405482 /* GeneralInfoCollectionViewCell.swift */; };
+		8BA405952527628900405482 /* GeneralInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA405932527628900405482 /* GeneralInfoCollectionViewCell.xib */; };
+		8BA40599252762C600405482 /* CharacteristicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA40597252762C600405482 /* CharacteristicsCollectionViewCell.swift */; };
+		8BA4059A252762C600405482 /* CharacteristicsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40598252762C600405482 /* CharacteristicsCollectionViewCell.xib */; };
+		8BA405A32527791C00405482 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA405A22527791C00405482 /* InformationViewController.swift */; };
+		8BC0C45D252AF4B30075F7E1 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C45C252AF4B30075F7E1 /* Fighter.swift */; };
+		8BC0C460252B06BE0075F7E1 /* FighterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C45F252B06BE0075F7E1 /* FighterRepository.swift */; };
+		8BC0C463252B2BF40075F7E1 /* EarsRangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C462252B2BF40075F7E1 /* EarsRangeModel.swift */; };
+		8BC0C466252B44D40075F7E1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C465252B44D40075F7E1 /* Utility.swift */; };
+		8BC0C46B252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C469252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.swift */; };
+		8BC0C46C252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC0C46A252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +49,17 @@
 		8B3D0B422524C5C300E3408C /* FighterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B3D0B432524C5C300E3408C /* FighterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FighterCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterDetailViewController.swift; sourceTree = "<group>"; };
-		8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BA405922527628900405482 /* GeneralInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BA405932527628900405482 /* GeneralInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		8BA40597252762C600405482 /* CharacteristicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BA40598252762C600405482 /* CharacteristicsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8BA405A22527791C00405482 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		8BC0C45C252AF4B30075F7E1 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
+		8BC0C45F252B06BE0075F7E1 /* FighterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterRepository.swift; sourceTree = "<group>"; };
+		8BC0C462252B2BF40075F7E1 /* EarsRangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarsRangeModel.swift; sourceTree = "<group>"; };
+		8BC0C465252B44D40075F7E1 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		8BC0C469252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BC0C46A252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSliderCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,9 @@
 		8B3D0B0E25231B8400E3408C /* Fighter Pedia */ = {
 			isa = PBXGroup;
 			children = (
+				8BC0C45B252AF4530075F7E1 /* Model */,
+				8BC0C45A252AF41A0075F7E1 /* Repository */,
+				8BA4058F2527434100405482 /* Information */,
 				8B3D0B472525B66E00E3408C /* FighterDetail */,
 				8B3D0B2F2524BC7100E3408C /* FighterCollection */,
 				8B3D0B2525245DAB00E3408C /* Eras */,
@@ -110,9 +133,40 @@
 			isa = PBXGroup;
 			children = (
 				8B3D0B492525B71C00E3408C /* FighterDetailViewController.swift */,
-				8B3D0B4C2525BB9000E3408C /* ImageCollectionViewCell.swift */,
+				8BC0C469252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.swift */,
+				8BC0C46A252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.xib */,
 			);
 			path = FighterDetail;
+			sourceTree = "<group>";
+		};
+		8BA4058F2527434100405482 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				8BA405922527628900405482 /* GeneralInfoCollectionViewCell.swift */,
+				8BA405932527628900405482 /* GeneralInfoCollectionViewCell.xib */,
+				8BA40597252762C600405482 /* CharacteristicsCollectionViewCell.swift */,
+				8BA40598252762C600405482 /* CharacteristicsCollectionViewCell.xib */,
+				8BA405A22527791C00405482 /* InformationViewController.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		8BC0C45A252AF41A0075F7E1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8BC0C45F252B06BE0075F7E1 /* FighterRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8BC0C45B252AF4530075F7E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BC0C45C252AF4B30075F7E1 /* Fighter.swift */,
+				8BC0C462252B2BF40075F7E1 /* EarsRangeModel.swift */,
+				8BC0C465252B44D40075F7E1 /* Utility.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3D0B29252463F700E3408C /* ErasTableViewCell.xib in Resources */,
+				8BA405952527628900405482 /* GeneralInfoCollectionViewCell.xib in Resources */,
 				8B3D0B1C25231B8500E3408C /* LaunchScreen.storyboard in Resources */,
 				8B3D0B1925231B8500E3408C /* Assets.xcassets in Resources */,
 				8B3D0B452524C5C300E3408C /* FighterCollectionViewCell.xib in Resources */,
+				8BC0C46C252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.xib in Resources */,
 				8B3D0B1725231B8400E3408C /* Main.storyboard in Resources */,
+				8BA4059A252762C600405482 /* CharacteristicsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,12 +247,19 @@
 				8B3D0B28252463F700E3408C /* ErasTableViewCell.swift in Sources */,
 				8B3D0B1425231B8400E3408C /* ViewController.swift in Sources */,
 				8B3D0B312524BC9400E3408C /* FighterCollectionViewController.swift in Sources */,
+				8BC0C466252B44D40075F7E1 /* Utility.swift in Sources */,
 				8B3D0B2D2524689800E3408C /* ErasViewController.swift in Sources */,
 				8B3D0B1025231B8400E3408C /* AppDelegate.swift in Sources */,
+				8BC0C45D252AF4B30075F7E1 /* Fighter.swift in Sources */,
 				8B3D0B4A2525B71C00E3408C /* FighterDetailViewController.swift in Sources */,
-				8B3D0B4D2525BB9000E3408C /* ImageCollectionViewCell.swift in Sources */,
+				8BC0C460252B06BE0075F7E1 /* FighterRepository.swift in Sources */,
+				8BA40599252762C600405482 /* CharacteristicsCollectionViewCell.swift in Sources */,
+				8BC0C46B252B5D2D0075F7E1 /* ImageSliderCollectionViewCell.swift in Sources */,
 				8B3D0B442524C5C300E3408C /* FighterCollectionViewCell.swift in Sources */,
 				8B3D0B1225231B8400E3408C /* SceneDelegate.swift in Sources */,
+				8BA405942527628900405482 /* GeneralInfoCollectionViewCell.swift in Sources */,
+				8BC0C463252B2BF40075F7E1 /* EarsRangeModel.swift in Sources */,
+				8BA405A32527791C00405482 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

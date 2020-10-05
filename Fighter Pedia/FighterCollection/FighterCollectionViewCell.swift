@@ -16,7 +16,6 @@ class FighterCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        labelFlightName.text = "Flight"
         labelFlightName.layer.borderWidth = 1
         labelFlightName.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         labelFlightName.layer.cornerRadius = 5
@@ -27,9 +26,9 @@ class FighterCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure(flightName:String, FlightImage:UIImageView){
+    func configure(flightName:String, FlightImage:String){
         labelFlightName.text = flightName
-        
+        imageViewFlight.image = UIImage(named: FlightImage)
     }
     
     static func nib() -> UINib {
