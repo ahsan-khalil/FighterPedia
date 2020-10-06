@@ -15,6 +15,7 @@ class FighterDetailViewController: UIViewController {
     @IBOutlet weak var fighterPicsCollectionView:UICollectionView!
     @IBOutlet weak var FighterOperatorsCollectionView: UICollectionView!
     
+    
    
     @IBOutlet weak var viewFighterInfoBG: UIView!
     @IBOutlet var btnCollection: [UIButton]!
