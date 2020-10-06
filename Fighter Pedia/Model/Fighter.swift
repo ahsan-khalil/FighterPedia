@@ -11,6 +11,11 @@ struct PrimaryUsers{
     var username:String
 }
 
+struct KeyValuePair{
+    var title:String
+    var detail:String
+}
+
 
 struct GeneralInfo {
     var role:String
@@ -38,6 +43,7 @@ struct GeneralCharachteristics{
 struct Performance{
     var title:String
     var detail:String
+    
 }
 struct CombatHistory{
     var history:String
@@ -77,6 +83,47 @@ class Fighter{
     var combatHistoryList:[CombatHistory]!
     var armamentList:[Armament]!
     var picturesList:[String]!
+    
+    
+    func getGeneralCharachteristicsList() -> [KeyValuePair] {
+        var list:[KeyValuePair] = [KeyValuePair]()
+        for genCharacter in self.generalCharacteristicsList {
+            list.append(KeyValuePair(title: genCharacter.title, detail: genCharacter.detail))
+        }
+        return list
+        
+    }
+    
+    func getPerformanceList() -> [KeyValuePair] {
+        var list:[KeyValuePair] = [KeyValuePair]()
+        for performance in self.peromanceList {
+            list.append(KeyValuePair(title: performance.title, detail: performance.detail))
+        }
+        return list
+    }
+    
+    func getGeneralInfoList() -> [KeyValuePair] {
+        var list:[KeyValuePair] = [KeyValuePair]()
+       
+        
+        list.append(KeyValuePair(title: "Role", detail: "\(generalInfo.role)"))
+        list.append(KeyValuePair(title: "Manufacturer", detail: "\(generalInfo.manufacturer)"))
+        list.append(KeyValuePair(title: "Designed By", detail: "\(generalInfo.designedBy)"))
+        list.append(KeyValuePair(title: "First Flight", detail: "\(generalInfo.FirstFlight)"))
+        list.append(KeyValuePair(title: "Introduced", detail: "\(generalInfo.introduced)"))
+        list.append(KeyValuePair(title: "Retired", detail: "\(generalInfo.retired)"))
+        
+        var tempUserData:String = ""
+        for user in generalInfo.PrimaryUsers {
+            tempUserData += "\(user.username) \n"
+        }
+        
+        list.append(KeyValuePair(title: "Primary Users", detail: "\(tempUserData)"))
+        list.append(KeyValuePair(title: "Number Built", detail: "\(generalInfo.numberBuilt)"))
+        
+        
+        return list
+    }
     
     
     

@@ -75,18 +75,21 @@ class FighterDetailViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
         print("clicked1")
         vc.title = "General Information"
+        vc.configure(list: selectedFighter.getGeneralInfoList())
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onClickGeneralCharacteristics(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
         print("clicked2")
         vc.title = "General Characteristics"
+        vc.configure(list: selectedFighter.getGeneralCharachteristicsList())
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onClickPerformance(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as! InformationViewController
         print("clicked3")
         vc.title = "Performance"
+        vc.configure(list: selectedFighter.getPerformanceList())
         navigationController?.pushViewController(vc, animated: true)
     }
     
