@@ -125,6 +125,17 @@ class Fighter{
         return list
     }
     
+    func getFlagList() -> [String]{
+        var tempList = [String]()
+        
+        for flag in self.flightOperatorsList {
+            tempList.append(flag.countryName)
+        }
+        
+        return tempList
+    
+    }
+    
     
     
 }

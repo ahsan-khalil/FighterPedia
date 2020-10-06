@@ -7,13 +7,68 @@
 
 import UIKit
 
+extension UICollectionView {
+    @objc func collectionView(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+        cell.configure(image: "pakistan")
+        cell.layer.borderWidth = 3
+        cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cell.layer.cornerRadius = 5
+        return cell
+    }
+    @objc func getCellCountSize() -> Int {
+        return 0
+    }
+}
+
+class FighterPicsCollection:UICollectionView{
+    var picturesList:[String]!
+    override func collectionView(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+            cell.configure(image: picturesList[indexPath.row])
+            cell.layer.borderWidth = 3
+            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.layer.cornerRadius = 5
+            return cell
+    }
+    func configure(list:[String]){
+        picturesList = list
+    }
+    
+    override func getCellCountSize() -> Int {
+        return picturesList.count
+    }
+}
+
+class FighterOperatorsCollection:UICollectionView{
+    var picturesList:[String]!
+    override func collectionView(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 17
+        cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cell.configure(image: picturesList[indexPath.row].lowercased())
+        return cell
+    }
+    
+    func configure(list:[String]){
+        picturesList = list
+    }
+    
+    override func getCellCountSize() -> Int {
+        return picturesList.count
+    }
+}
 
 
 class FighterDetailViewController: UIViewController {
 
     public static let reuseIdentifier = "FighterDetailViewController"
-    @IBOutlet weak var fighterPicsCollectionView:UICollectionView!
-    @IBOutlet weak var FighterOperatorsCollectionView: UICollectionView!
+    @IBOutlet weak var fighterPicsCollectionView:FighterPicsCollection!
+    @IBOutlet weak var FighterOperatorsCollectionView: FighterOperatorsCollection!
+    
+    
+    
     
     
    
@@ -48,6 +103,11 @@ class FighterDetailViewController: UIViewController {
         
         fighterPicsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
         FighterOperatorsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
+        
+        
+        fighterPicsCollectionView.configure(list: selectedFighter.picturesList)
+        
+        FighterOperatorsCollectionView.configure(list: selectedFighter.getFlagList())
         
         
         for btn in btnCollection {
@@ -93,38 +153,37 @@ class FighterDetailViewController: UIViewController {
         vc.configure(list: selectedFighter.getPerformanceList())
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-
 }
 
 
 extension FighterDetailViewController:UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(collectionView.tag == picCollectionViewTag){
-            return selectedFighter.picturesList.count
-        }else {
-            return selectedFighter.flightOperatorsList.count
-        }
+//        if(collectionView.tag == picCollectionViewTag){
+//            return selectedFighter.picturesList.count
+//        }else {
+//            return selectedFighter.flightOperatorsList.count
+//        }
+        return collectionView.getCellCountSize()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if(collectionView.tag == picCollectionViewTag){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
-            cell.configure(image: selectedFighter.picturesList[indexPath.row])
-            cell.layer.borderWidth = 3
-            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            return cell
-        }else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
-            cell.layer.borderWidth = 1
-            cell.layer.cornerRadius = 17
-            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            let flagName = selectedFighter.flightOperatorsList[indexPath.row].countryName
-//            let flagPath = (Utility.flagsPath[flagName])?.lowercased() ?? "pakistan"
-            cell.configure(image: flagName.lowercased())
-            
-            return cell
-        }
+//        if(collectionView.tag == picCollectionViewTag){
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+//            cell.configure(image: selectedFighter.picturesList[indexPath.row])
+//            cell.layer.borderWidth = 3
+//            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//            cell.layer.cornerRadius = 5
+//            return cell
+//        }else {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+//            cell.layer.borderWidth = 1
+//            cell.layer.cornerRadius = 17
+//            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//            let flagName = selectedFighter.flightOperatorsList[indexPath.row].countryName
+//            cell.configure(image: flagName.lowercased())
+//            return cell
+//        }
+        return collectionView.collectionView(collectionView: collectionView, indexPath: indexPath)
         
     }
     

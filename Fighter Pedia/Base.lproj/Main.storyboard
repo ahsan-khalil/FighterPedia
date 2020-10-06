@@ -220,7 +220,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-15-GfE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-15-GfE" customClass="FighterPicsCollection" customModule="Fighter_Pedia" customModuleProvider="target">
                                 <rect key="frame" x="10" y="59" width="394" height="277"/>
                                 <color key="backgroundColor" red="0.9644349217414856" green="0.96833425760269165" blue="0.98895889520645142" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -262,7 +262,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-Uq-wRX">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-Uq-wRX" customClass="FighterOperatorsCollection" customModule="Fighter_Pedia" customModuleProvider="target">
                                 <rect key="frame" x="146" y="353" width="248" height="51"/>
                                 <color key="backgroundColor" red="0.9222978949546814" green="0.91850578784942627" blue="0.97450393438339233" alpha="0.10453232020547945" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -407,6 +407,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="394" height="96"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -421,6 +422,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionLayout" destination="tDK-qo-N2q" id="u41-dA-rqY"/>
                         <outlet property="infoCollectionView" destination="xIA-Rh-WKu" id="wSf-gt-VE8"/>
                     </connections>
                 </viewController>

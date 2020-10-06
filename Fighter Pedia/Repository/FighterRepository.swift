@@ -23,6 +23,12 @@ class FighterRepository{
         users.append(PrimaryUsers(username: "Hungarian Air Force"))
         users.append(PrimaryUsers(username: "Regia Aeronautica"))
         users.append(PrimaryUsers(username: "Romanian Air Force"))
+        users.append(PrimaryUsers(username: "Hungarian Air Force"))
+        users.append(PrimaryUsers(username: "Regia Aeronautica"))
+        users.append(PrimaryUsers(username: "Romanian Air Force"))
+        users.append(PrimaryUsers(username: "Hungarian Air Force"))
+        users.append(PrimaryUsers(username: "Regia Aeronautica"))
+        users.append(PrimaryUsers(username: "Romanian Air Force"))
         
         let tempGeneralInfo = GeneralInfo(role: "Heavy fighter/Fighter-bomber/Night fighter", manufacturer: "Bayerische Flugzeugwerke Messerschmitt", designedBy: "Willy Messerschmitt", FirstFlight: firstdate!, introduced: 1937, retired: "1945 (Luftwaffe)", PrimaryUsers: users, numberBuilt: "6,170")
         tempFighter.generalInfo = tempGeneralInfo

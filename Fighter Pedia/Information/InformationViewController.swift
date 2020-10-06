@@ -11,20 +11,27 @@ class InformationViewController: UIViewController {
     
     static let identifier = "InformationViewController"
     @IBOutlet weak var infoCollectionView: UICollectionView!
-    var currentView:String = CharacteristicsCollectionViewCell.Identifier
     
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!{
+        didSet {
+            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
     
     var keyValuePairList = [KeyValuePair]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(currentView == CharacteristicsCollectionViewCell.Identifier){
-            infoCollectionView.register(CharacteristicsCollectionViewCell.nib(), forCellWithReuseIdentifier: CharacteristicsCollectionViewCell.Identifier)
-        }
+        
+        infoCollectionView.register(CharacteristicsCollectionViewCell.nib(), forCellWithReuseIdentifier: CharacteristicsCollectionViewCell.Identifier)
+        
+        infoCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
         infoCollectionView.delegate = self
         infoCollectionView.dataSource = self
+        
+
     }
     
     func configure(list:[KeyValuePair]){
@@ -32,7 +39,7 @@ class InformationViewController: UIViewController {
     }
 }
 
-extension InformationViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension InformationViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.keyValuePairList.count
     }
@@ -43,7 +50,6 @@ extension InformationViewController:UICollectionViewDelegate,UICollectionViewDat
         cell.layer.cornerRadius = 5
         cell.layer.borderWidth = 2
         cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
         return cell
     }
     

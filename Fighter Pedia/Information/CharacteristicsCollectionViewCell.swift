@@ -14,10 +14,23 @@ class CharacteristicsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelExplanation: UILabel!
     
+    
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        //for resizing
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+                
+                
     }
+    
+    
     
     static func nib() -> UINib {
         UINib(nibName: Identifier, bundle: nil)

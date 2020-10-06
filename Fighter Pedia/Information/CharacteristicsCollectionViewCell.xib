@@ -11,20 +11,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacteristicsCollectionViewCell" id="gTV-IL-0wX" customClass="CharacteristicsCollectionViewCell" customModule="Fighter_Pedia" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWn-qG-B6A">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWn-qG-B6A">
                         <rect key="frame" x="10" y="5" width="46" height="27"/>
                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="23"/>
                         <color key="textColor" red="0.91720157861709595" green="0.94523555040359497" blue="0.97433668375015259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multirole FIghter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-WC-PMW">
-                        <rect key="frame" x="30" y="40" width="104" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Multirole FIghter" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-WC-PMW">
+                        <rect key="frame" x="30" y="40" width="310" height="27.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="310" id="0xv-nU-1iu"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="15"/>
                         <color key="textColor" red="0.91720157861709595" green="0.94523555040359497" blue="0.97433668375015259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -36,14 +39,17 @@
             <constraints>
                 <constraint firstItem="TMd-WC-PMW" firstAttribute="top" secondItem="eWn-qG-B6A" secondAttribute="bottom" constant="8" symbolic="YES" id="EbP-O9-Snv"/>
                 <constraint firstItem="eWn-qG-B6A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Lth-XI-Pg4"/>
+                <constraint firstAttribute="trailing" secondItem="TMd-WC-PMW" secondAttribute="trailing" constant="30" id="UkN-IK-DFp"/>
                 <constraint firstItem="eWn-qG-B6A" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="d1d-Vp-6UT"/>
                 <constraint firstItem="TMd-WC-PMW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="ffe-Mb-Jpp"/>
+                <constraint firstAttribute="bottom" secondItem="TMd-WC-PMW" secondAttribute="bottom" constant="5" id="wFo-S9-gKI"/>
             </constraints>
+            <size key="customSize" width="370" height="80"/>
             <connections>
                 <outlet property="labelExplanation" destination="TMd-WC-PMW" id="T97-LQ-qpR"/>
                 <outlet property="labelTitle" destination="eWn-qG-B6A" id="nXW-MF-93d"/>
             </connections>
-            <point key="canvasLocation" x="110" y="102"/>
+            <point key="canvasLocation" x="108.69565217391305" y="105.13392857142857"/>
         </collectionViewCell>
     </objects>
 </document>
