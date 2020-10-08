@@ -53,6 +53,8 @@ extension InformationViewController:UICollectionViewDelegate,UICollectionViewDat
         return cell
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Clicked")
     }

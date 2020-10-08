@@ -35,6 +35,7 @@ class FighterPicsCollection:UICollectionView{
         picturesList = list
     }
     
+    
     override func getCellCountSize() -> Int {
         return picturesList.count
     }
