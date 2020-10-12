@@ -148,6 +148,7 @@
 		8B3D0B0E25231B8400E3408C /* Fighter Pedia */ = {
 			isa = PBXGroup;
 			children = (
+				8BF780BF25347F18000236EB /* AddFighter */,
 				8BC0C45A252AF41A0075F7E1 /* Repository */,
 				8BF7808225309980000236EB /* Utility */,
 				8BF7808125308003000236EB /* CoreDataFiles */,
@@ -275,6 +276,13 @@
 				8BF7808325309993000236EB /* Utility.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		8BF780BF25347F18000236EB /* AddFighter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddFighter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iG-n1-AmN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QSh-Lu-goZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
         <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573.91304347826087" y="103.79464285714285"/>
+            <point key="canvasLocation" x="1484.057971014493" y="103.79464285714285"/>
         </scene>
         <!--Eras-->
         <scene sceneID="6Ij-8q-gOz">
@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQx-iQ-cik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="790"/>
+            <point key="canvasLocation" x="1484" y="775"/>
         </scene>
         <!--Fighter Detail View Controller-->
         <scene sceneID="Ts6-kX-L3f">
@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kto-FL-50c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="103.79464285714285"/>
+            <point key="canvasLocation" x="3189.8550724637685" y="103.79464285714285"/>
         </scene>
         <!--Information View Controller-->
         <scene sceneID="nsh-51-9PK">
@@ -420,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fE-Dy-pxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2938" y="104"/>
+            <point key="canvasLocation" x="3847.826086956522" y="103.79464285714285"/>
         </scene>
         <!--Single Wallpaper View Controller-->
         <scene sceneID="g8q-kS-Mt2">
@@ -628,26 +628,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fex-QM-a5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421.7391304347827" y="103.79464285714285"/>
+            <point key="canvasLocation" x="2331.8840579710145" y="103.79464285714285"/>
+        </scene>
+        <!--MAIN MENU-->
+        <scene sceneID="Rzl-Ma-1ko">
+            <objects>
+                <viewController title="MAIN MENU" id="cfj-ai-Afa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jwV-Gb-6U7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="FighterPedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-S8-3AY">
+                                <rect key="frame" x="37" y="128" width="314" height="60"/>
+                                <color key="backgroundColor" red="0.96592551469999999" green="0.98531264070000002" blue="0.98845762010000005" alpha="0.046714469180000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="c3P-c5-sbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wbr-ye-ZiX">
+                                <rect key="frame" x="97.5" y="418" width="219" height="60"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FAQ-Dm-sOJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="ADD NEW FIGHTER">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-TO-NEy">
+                                <rect key="frame" x="98" y="498" width="218" height="60"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8lI-BQ-WU0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="VIEW ALL FIGHTER">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gMU-R5-62V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sRE-jS-B4z"/>
+                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wbr-ye-ZiX" firstAttribute="centerX" secondItem="jwV-Gb-6U7" secondAttribute="centerX" id="2K5-Gj-Qd6"/>
+                            <constraint firstItem="wbr-ye-ZiX" firstAttribute="centerY" secondItem="jwV-Gb-6U7" secondAttribute="centerY" id="4bz-gJ-ahg"/>
+                            <constraint firstItem="xOP-TO-NEy" firstAttribute="centerX" secondItem="jwV-Gb-6U7" secondAttribute="centerX" id="C5T-i8-q8R"/>
+                            <constraint firstItem="xOP-TO-NEy" firstAttribute="top" secondItem="wbr-ye-ZiX" secondAttribute="bottom" constant="20" id="TTj-5E-8x6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="jFH-YP-Tfm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Joe-Fb-ERa"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjj-7h-rNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.05797101449278" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="fyc-zD-ovv">
+        <scene sceneID="zJT-tr-p1I">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4iG-n1-AmN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QSh-Lu-goZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="X6R-Fo-yti">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ffj-7k-4j3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99204951524734497" green="0.99221879243850708" blue="0.9920387864112854" alpha="0.1034353595890411" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MHZ-cE-QW6"/>
+                        <segue destination="cfj-ai-Afa" kind="relationship" relationship="rootViewController" id="FPo-wC-UiF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rbf-ZU-HtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNf-Il-Azy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="104"/>
+            <point key="canvasLocation" x="-726.08695652173924" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>
