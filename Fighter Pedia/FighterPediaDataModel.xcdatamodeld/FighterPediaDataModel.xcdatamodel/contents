@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="UserPreferences" representedClassName="UserPreferences" syncable="YES" codeGenerationType="class">
+    <entity name="Armament" representedClassName="Armament" syncable="YES">
+        <attribute name="armament" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="armamentList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="CombatHistory" representedClassName="CombatHistory" syncable="YES">
+        <attribute name="history" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="combatHistoryList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="Fighter" representedClassName="Fighter" syncable="YES">
+        <attribute name="flightName" optional="YES" attributeType="String"/>
+        <relationship name="armamentList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Armament" inverseName="fighter" inverseEntity="Armament"/>
+        <relationship name="combatHistoryList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CombatHistory" inverseName="fighter" inverseEntity="CombatHistory"/>
+        <relationship name="flightOperatorsList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FlightOperator" inverseName="fighter" inverseEntity="FlightOperator"/>
+        <relationship name="generalCharacterislticslist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeneralCharacteristics" inverseName="fighter" inverseEntity="GeneralCharacteristics"/>
+        <relationship name="generalInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeneralInfo" inverseName="fighter" inverseEntity="GeneralInfo"/>
+        <relationship name="interestingFactsList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InterestingFacts" inverseName="fighter" inverseEntity="InterestingFacts"/>
+        <relationship name="performanceList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Performance" inverseName="fighter" inverseEntity="Performance"/>
+        <relationship name="picturesList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Picture" inverseName="fighter" inverseEntity="Picture"/>
+    </entity>
+    <entity name="FlightOperator" representedClassName="FlightOperator" syncable="YES">
+        <attribute name="countryFlag" optional="YES" attributeType="String"/>
+        <attribute name="countryName" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fighter" inverseName="flightOperatorsList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="GeneralCharacteristics" representedClassName="GeneralCharacteristics" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="generalCharacterislticslist" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="GeneralInfo" representedClassName="GeneralInfo" syncable="YES">
+        <attribute name="designedBy" optional="YES" attributeType="String"/>
+        <attribute name="firstFlight" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="introduced" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String"/>
+        <attribute name="numberBuilt" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="retired" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="generalInfo" inverseEntity="Fighter"/>
+        <relationship name="primaryUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrimaryUser" inverseName="generalInfo" inverseEntity="PrimaryUser"/>
+    </entity>
+    <entity name="InterestingFacts" representedClassName="InterestingFacts" syncable="YES">
+        <attribute name="fact" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="interestingFactsList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="Performance" representedClassName="Performance" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="performanceList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="Picture" representedClassName="Picture" syncable="YES">
+        <attribute name="picture" optional="YES" attributeType="String"/>
+        <relationship name="fighter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fighter" inverseName="picturesList" inverseEntity="Fighter"/>
+    </entity>
+    <entity name="PrimaryUser" representedClassName="PrimaryUser" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="generalInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeneralInfo" inverseName="primaryUser" inverseEntity="GeneralInfo"/>
+    </entity>
+    <entity name="UserPreferences" representedClassName="UserPreferences" syncable="YES">
         <attribute name="backgroundImage" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="UserPreferences" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="UserPreferences" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="PrimaryUser" positionX="-63" positionY="-9" width="128" height="73"/>
+        <element name="InterestingFacts" positionX="-54" positionY="9" width="128" height="28"/>
+        <element name="FlightOperator" positionX="-36" positionY="18" width="128" height="88"/>
+        <element name="GeneralCharacteristics" positionX="-18" positionY="27" width="128" height="28"/>
+        <element name="Performance" positionX="0" positionY="45" width="128" height="28"/>
+        <element name="CombatHistory" positionX="18" positionY="63" width="128" height="28"/>
+        <element name="Armament" positionX="36" positionY="81" width="128" height="28"/>
+        <element name="GeneralInfo" positionX="-9" positionY="36" width="128" height="28"/>
+        <element name="Fighter" positionX="0" positionY="45" width="128" height="178"/>
+        <element name="Picture" positionX="9" positionY="54" width="128" height="28"/>
     </elements>
 </model>

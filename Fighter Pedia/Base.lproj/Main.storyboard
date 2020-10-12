@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fighter_Pedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +159,9 @@
                             <constraint firstItem="LTm-u3-Wf3" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="zil-4w-nX2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YHn-rU-F5t"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="YHn-rU-F5t">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KjF-Bw-Rgn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelTitle" destination="OIT-Yp-5Nk" id="I0I-8Y-GSb"/>
                         <outletCollection property="btnList" destination="Tyi-NU-Cq4" collectionClass="NSMutableArray" id="Xk2-ZG-Fy9"/>

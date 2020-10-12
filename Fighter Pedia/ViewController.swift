@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //FighterRepository.AddFighterList()
+        FighterRepository.displayData()
         // Do any additional setup after loading the view.
         for btn in btnList {
             btn.layer.cornerRadius  = 10
@@ -25,7 +27,6 @@ class ViewController: UIViewController {
         
         labelTitle.layer.masksToBounds = true
         labelTitle.layer.cornerRadius = 10
-        
     }
     
     @IBAction func onClickEras(_ sender: Any) {

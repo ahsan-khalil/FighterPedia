@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PrimaryUsers{
+struct PrimaryUsersModel{
     var username:String
 }
 
@@ -17,44 +17,44 @@ struct KeyValuePair{
 }
 
 
-struct GeneralInfo {
+struct GeneralInfoModel {
     var role:String
     var manufacturer:String
     var designedBy:String
     var FirstFlight:Date
     var introduced:Int
     var retired:String
-    var PrimaryUsers:[PrimaryUsers]
+    var PrimaryUsers:[PrimaryUsersModel]
     var numberBuilt:String
 }
-struct InterestingFact {
+struct InterestingFactModel {
     var facts:String
 }
-struct FlightOperator {
+struct FlightOperatorModel {
     var countryName:String
     var countryFlag:String!
 }
-struct GeneralCharachteristics{
+struct GeneralCharachteristicsModel{
     var title: String
     var detail: String
-    
-    
+
+
 }
-struct Performance{
+struct PerformanceModel{
     var title:String
     var detail:String
-    
+
 }
-struct CombatHistory{
+struct CombatHistoryModel{
     var history:String
 }
 
-struct Armament{
+struct ArmamentModel{
     var armament:String
 }
 
-class Fighter{
-    init(flightname: String = "Default", flightID: Int? = nil, flightStringId: String? = nil, generalInfo: GeneralInfo? = nil, interestingFactsList: [InterestingFact]? = nil, flightOperatorsList: [FlightOperator]? = nil, generalCharacteristicsList: [GeneralCharachteristics]? = nil, peromanceList: [Performance]? = nil, combatHistoryList: [CombatHistory]? = nil, armamentList: [Armament]? = nil, picturesList: [String]? = nil) {
+class FighterModel{
+    internal init(flightname: String = "Default", flightID: Int? = nil, flightStringId: String? = nil, generalInfo: GeneralInfoModel? = nil, interestingFactsList: [InterestingFactModel]? = nil, flightOperatorsList: [FlightOperatorModel]? = nil, generalCharacteristicsList: [GeneralCharachteristicsModel]? = nil, peromanceList: [PerformanceModel]? = nil, combatHistoryList: [CombatHistoryModel]? = nil, armamentList: [ArmamentModel]? = nil, picturesList: [String]? = nil) {
         self.flightname = flightname
         self.flightID = flightID
         self.flightStringId = flightStringId
@@ -68,32 +68,33 @@ class Fighter{
         self.picturesList = picturesList
     }
     
+    
     init(flightname:String){
         self.flightname = flightname
     }
-    
+
     var flightname:String = "Default"
     var flightID:Int!
     var flightStringId:String!
-    var generalInfo:GeneralInfo!
-    var interestingFactsList:[InterestingFact]!
-    var flightOperatorsList:[FlightOperator]!
-    var generalCharacteristicsList:[GeneralCharachteristics]!
-    var peromanceList:[Performance]!
-    var combatHistoryList:[CombatHistory]!
-    var armamentList:[Armament]!
+    var generalInfo:GeneralInfoModel!
+    var interestingFactsList:[InterestingFactModel]!
+    var flightOperatorsList:[FlightOperatorModel]!
+    var generalCharacteristicsList:[GeneralCharachteristicsModel]!
+    var peromanceList:[PerformanceModel]!
+    var combatHistoryList:[CombatHistoryModel]!
+    var armamentList:[ArmamentModel]!
     var picturesList:[String]!
-    
-    
+
+
     func getGeneralCharachteristicsList() -> [KeyValuePair] {
         var list:[KeyValuePair] = [KeyValuePair]()
         for genCharacter in self.generalCharacteristicsList {
             list.append(KeyValuePair(title: genCharacter.title, detail: genCharacter.detail))
         }
         return list
-        
+
     }
-    
+
     func getPerformanceList() -> [KeyValuePair] {
         var list:[KeyValuePair] = [KeyValuePair]()
         for performance in self.peromanceList {
@@ -101,41 +102,41 @@ class Fighter{
         }
         return list
     }
-    
+
     func getGeneralInfoList() -> [KeyValuePair] {
         var list:[KeyValuePair] = [KeyValuePair]()
-       
-        
+
+
         list.append(KeyValuePair(title: "Role", detail: "\(generalInfo.role)"))
         list.append(KeyValuePair(title: "Manufacturer", detail: "\(generalInfo.manufacturer)"))
         list.append(KeyValuePair(title: "Designed By", detail: "\(generalInfo.designedBy)"))
         list.append(KeyValuePair(title: "First Flight", detail: "\(generalInfo.FirstFlight)"))
         list.append(KeyValuePair(title: "Introduced", detail: "\(generalInfo.introduced)"))
         list.append(KeyValuePair(title: "Retired", detail: "\(generalInfo.retired)"))
-        
+
         var tempUserData:String = ""
         for user in generalInfo.PrimaryUsers {
             tempUserData += "\(user.username) \n"
         }
-        
+
         list.append(KeyValuePair(title: "Primary Users", detail: "\(tempUserData)"))
         list.append(KeyValuePair(title: "Number Built", detail: "\(generalInfo.numberBuilt)"))
-        
-        
+
+
         return list
     }
-    
+
     func getFlagList() -> [String]{
         var tempList = [String]()
-        
+
         for flag in self.flightOperatorsList {
             tempList.append(flag.countryName)
         }
-        
+
         return tempList
-    
+
     }
-    
-    
-    
+
+
+
 }

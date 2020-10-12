@@ -78,7 +78,7 @@ class FighterDetailViewController: UIViewController {
     
     
     
-    var selectedFighter:Fighter!
+    var selectedFighter:FighterModel!
     
     let picCollectionViewTag = 1
     let flagCollectionViewTag = 2

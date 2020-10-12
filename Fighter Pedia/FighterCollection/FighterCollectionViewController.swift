@@ -11,7 +11,7 @@ class FighterCollectionViewController: UIViewController {
 
     public static let reuseIdentifier = "FighterCollectionViewController"
     
-    private var flightList:[Fighter]! = [Fighter]()
+    private var flightList:[FighterModel]! = [FighterModel]()
     
     @IBOutlet weak var fighterCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class FighterCollectionViewController: UIViewController {
         fighterCollectionView.dataSource = self
     }
     
-    func setFighterList(fighterList:[Fighter]){
+    func setFighterList(fighterList:[FighterModel]){
         self.flightList = fighterList
     }
 }
@@ -38,7 +38,7 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
         cell.layer.cornerRadius = 5
         cell.layer.borderWidth = 2
         cell.layer.borderColor = #colorLiteral(red: 0.06467689574, green: 0.04641190916, blue: 0.1739622355, alpha: 1)
-        let selectedFighter = self.flightList[indexPath.count]
+        let selectedFighter = self.flightList[indexPath.row]
         cell.configure(flightName: selectedFighter.flightname, FlightImage: selectedFighter.picturesList[0])
 
         
@@ -54,7 +54,7 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("i was clicked")
         
-        let selectedFighter = self.flightList[indexPath.count]
+        let selectedFighter = self.flightList[indexPath.row]
         
         
         let vc = storyboard?.instantiateViewController(identifier: FighterDetailViewController.reuseIdentifier) as! FighterDetailViewController
