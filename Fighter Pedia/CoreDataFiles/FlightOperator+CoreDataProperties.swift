@@ -2,7 +2,7 @@
 //  FlightOperator+CoreDataProperties.swift
 //  Fighter Pedia
 //
-//  Created by Ahsan Khalil🤕 on 12/10/2020.
+//  Created by Ahsan Khalil🤕 on 13/10/2020.
 //
 //
 
@@ -16,8 +16,8 @@ extension FlightOperator {
         return NSFetchRequest<FlightOperator>(entityName: "FlightOperator")
     }
 
-    @NSManaged public var countryName: String?
     @NSManaged public var countryFlag: String?
+    @NSManaged public var countryName: String?
     @NSManaged public var fighter: NSSet?
 
 }

@@ -27,5 +27,9 @@ class ImageSliderCollectionViewCell: UICollectionViewCell {
         self.image.image = UIImage(named: image)
     }
     
+    func configure(image:UIImage){
+        self.image.image = image
+    }
+    
 
 }

@@ -2,7 +2,7 @@
 //  GeneralInfo+CoreDataProperties.swift
 //  Fighter Pedia
 //
-//  Created by Ahsan Khalil🤕 on 12/10/2020.
+//  Created by Ahsan Khalil🤕 on 13/10/2020.
 //
 //
 
@@ -16,15 +16,15 @@ extension GeneralInfo {
         return NSFetchRequest<GeneralInfo>(entityName: "GeneralInfo")
     }
 
-    @NSManaged public var role: String?
-    @NSManaged public var manufacturer: String?
     @NSManaged public var designedBy: String?
     @NSManaged public var firstFlight: Date?
     @NSManaged public var introduced: Int32
-    @NSManaged public var retired: String?
+    @NSManaged public var manufacturer: String?
     @NSManaged public var numberBuilt: NSDecimalNumber?
-    @NSManaged public var primaryUser: NSSet?
+    @NSManaged public var retired: String?
+    @NSManaged public var role: String?
     @NSManaged public var fighter: Fighter?
+    @NSManaged public var primaryUser: NSSet?
 
 }
 

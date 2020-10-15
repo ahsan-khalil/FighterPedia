@@ -25,7 +25,13 @@ class FighterPicsCollection:UICollectionView{
     var picturesList:[String]!
     override func collectionView(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSliderCollectionViewCell.identifier, for: indexPath) as! ImageSliderCollectionViewCell
+            let image = Utility.retriveImage(imageName: picturesList[indexPath.row])
+        if image != nil {
+            cell.configure(image: image!)
+        }else {
             cell.configure(image: picturesList[indexPath.row])
+        }
+            
             cell.layer.borderWidth = 3
             cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             cell.layer.cornerRadius = 5
@@ -116,7 +122,7 @@ class FighterDetailViewController: UIViewController {
         }
         
         if selectedFighter == nil {
-            print("you are idiot")
+            print("select fighter first")
             navigationController?.popViewController(animated: true)
         }else{
             navigationItem.title = selectedFighter.flightname

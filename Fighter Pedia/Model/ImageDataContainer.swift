@@ -6,6 +6,6 @@
 //
 
 import Foundation
-struct Wallpaper {
+struct ImageDataContainer {
     var img:String
 }

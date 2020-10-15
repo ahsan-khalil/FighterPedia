@@ -2,7 +2,7 @@
 //  PrimaryUser+CoreDataProperties.swift
 //  Fighter Pedia
 //
-//  Created by Ahsan Khalil🤕 on 12/10/2020.
+//  Created by Ahsan Khalil🤕 on 13/10/2020.
 //
 //
 
@@ -17,24 +17,7 @@ extension PrimaryUser {
     }
 
     @NSManaged public var username: String?
-    @NSManaged public var generalInfo: NSSet?
-
-}
-
-// MARK: Generated accessors for generalInfo
-extension PrimaryUser {
-
-    @objc(addGeneralInfoObject:)
-    @NSManaged public func addToGeneralInfo(_ value: GeneralInfo)
-
-    @objc(removeGeneralInfoObject:)
-    @NSManaged public func removeFromGeneralInfo(_ value: GeneralInfo)
-
-    @objc(addGeneralInfo:)
-    @NSManaged public func addToGeneralInfo(_ values: NSSet)
-
-    @objc(removeGeneralInfo:)
-    @NSManaged public func removeFromGeneralInfo(_ values: NSSet)
+    @NSManaged public var generalInfo: GeneralInfo?
 
 }
 

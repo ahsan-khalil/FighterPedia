@@ -2,7 +2,7 @@
 //  Performance+CoreDataProperties.swift
 //  Fighter Pedia
 //
-//  Created by Ahsan Khalil🤕 on 12/10/2020.
+//  Created by Ahsan Khalil🤕 on 13/10/2020.
 //
 //
 
@@ -16,8 +16,8 @@ extension Performance {
         return NSFetchRequest<Performance>(entityName: "Performance")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var detail: String?
+    @NSManaged public var title: String?
     @NSManaged public var fighter: Fighter?
 
 }

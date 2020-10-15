@@ -10,15 +10,98 @@ import CoreData
 
 
 class FighterRepository{
+    static func AddFighterList(fighterModel:FighterModel){
+        let context  = Utility.getFighterPediaPersistanceContainerContext()
+        let fighterJet = Fighter.init(context: context)
+        fighterJet.flightName = fighterModel.flightname
+        
+        for fo in fighterModel.flightOperatorsList {
+            let flightOperator = FlightOperator.init(context: context)
+            flightOperator.addToFighter(fighterJet)
+            fighterJet.addToFlightOperatorsList(flightOperator)
+            flightOperator.countryFlag = fo.countryFlag
+            flightOperator.countryName = fo.countryName
+        }
+        
+        for gc in fighterModel.generalCharacteristicsList {
+            let generalCharacteristics = GeneralCharacteristics.init(context: context)
+            generalCharacteristics.fighter = fighterJet
+            fighterJet.addToGeneralCharacterislticslist(generalCharacteristics)
+            generalCharacteristics.title = gc.title
+            generalCharacteristics.detail = gc.detail
+        }
+        
+        for perf in fighterModel.peromanceList {
+            let performance = Performance.init(context: context)
+            performance.fighter = fighterJet
+            fighterJet.addToPerformanceList(performance)
+            performance.title = perf.title
+            performance.detail = perf.detail
+        }
+        
+        for pic in fighterModel.picturesList {
+            let fighterPic = Picture.init(context: context)
+            fighterPic.fighter = fighterJet
+            fighterJet.addToPicturesList(fighterPic)
+            fighterPic.picture = pic
+        }
+        
+        
+        let interestingFact = InterestingFacts.init(context: context)
+        fighterJet.addToInterestingFactsList(interestingFact)
+        interestingFact.fact = "Hermann Göring was a proponent of the Bf 110, and nicknamed it his Eisenseiten, or \"Ironsides\"."
+        interestingFact.fighter = fighterJet
+        
+        
+        let generalInfo = GeneralInfo.init(context: context)
+        generalInfo.fighter = fighterJet
+        
+        let gi = fighterModel.generalInfo!
+        generalInfo.role = gi.role
+        generalInfo.manufacturer = gi.manufacturer
+        generalInfo.designedBy = gi.designedBy
+        generalInfo.firstFlight = gi.FirstFlight
+        generalInfo.introduced = Int32(gi.introduced)
+        generalInfo.retired = gi.retired
+        
+        generalInfo.numberBuilt = NSDecimalNumber(string: gi.numberBuilt)
+        
+        
+        for users in fighterModel.generalInfo.PrimaryUsers {
+            let primaryUsers = PrimaryUser.init(context: context)
+            primaryUsers.generalInfo = generalInfo
+            generalInfo.addToPrimaryUser(primaryUsers)
+            primaryUsers.username = users.username
+        }
+        
+        fighterJet.generalInfo = generalInfo
+        
+        let combatHistory = CombatHistory.init(context: context)
+        combatHistory.fighter = fighterJet
+        combatHistory.history = "During the Balkans Campaign, North African Campaign and the Eastern Front it rendered valuable ground support to the German Army as a potent fighter-bomber, (JagdBomber-Jabo)."
+        fighterJet.addToCombatHistoryList(combatHistory)
+        
+        let armament = Armament.init(context: context)
+        armament.armament = "2x 20 mm MG FF/M cannons (180 rounds per gun - 3 drums with 60 rounds each, cannon were reloaded by rear gunner or radio operator during flight)"
+        armament.fighter = fighterJet
+        fighterJet.addToArmamentList(armament)
+        
+        do {
+            try context.save()
+            print("data added successfully")
+            
+        } catch  {
+            print("exception: can't save")
+        }
+    }
     static func AddFighterList() {
         let context  = Utility.getFighterPediaPersistanceContainerContext()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        let firstdate = formatter.date(from: "25 may 1997")
         
         let fighterJet = Fighter.init(context: context)
         fighterJet.flightName = "Messerschmitt Bf 111"
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM yyyy"
-        let firstdate = formatter.date(from: "12 May 1936")
         
         var flightOperator = FlightOperator.init(context: context)
         flightOperator.addToFighter(fighterJet)
@@ -195,23 +278,23 @@ class FighterRepository{
         generalInfo.numberBuilt = 6170
         
         var primaryUsers = PrimaryUser.init(context: context)
-        primaryUsers.addToGeneralInfo(generalInfo)
+        primaryUsers.generalInfo = generalInfo
         
         generalInfo.addToPrimaryUser(primaryUsers)
         primaryUsers.username = "Luftwaffe"
         
         primaryUsers = PrimaryUser.init(context: context)
-        primaryUsers.addToGeneralInfo(generalInfo)
+        primaryUsers.generalInfo = generalInfo
         generalInfo.addToPrimaryUser(primaryUsers)
         primaryUsers.username = "Hungarian Air Force"
         
         primaryUsers = PrimaryUser.init(context: context)
-        primaryUsers.addToGeneralInfo(generalInfo)
+        primaryUsers.generalInfo = generalInfo
         generalInfo.addToPrimaryUser(primaryUsers)
         primaryUsers.username = "Regia Aeronautica"
         
         primaryUsers = PrimaryUser.init(context: context)
-        primaryUsers.addToGeneralInfo(generalInfo)
+        primaryUsers.generalInfo = generalInfo
         generalInfo.addToPrimaryUser(primaryUsers)
         primaryUsers.username = "Romanian Air Force"
         

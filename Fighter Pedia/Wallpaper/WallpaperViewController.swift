@@ -12,7 +12,7 @@ class WallpaperViewController: UIViewController {
     static let identifier = "wallpaperViewController"
     @IBOutlet weak var wallpeperCollectionViewContainer: UICollectionView!
     @IBOutlet weak var buttonGroupView: UIView!
-    var wallpaperList:[Wallpaper]!
+    var wallpaperList:[ImageDataContainer]!
     @IBOutlet weak var btnPrevious: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     

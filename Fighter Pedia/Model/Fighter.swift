@@ -54,7 +54,7 @@ struct ArmamentModel{
 }
 
 class FighterModel{
-    internal init(flightname: String = "Default", flightID: Int? = nil, flightStringId: String? = nil, generalInfo: GeneralInfoModel? = nil, interestingFactsList: [InterestingFactModel]? = nil, flightOperatorsList: [FlightOperatorModel]? = nil, generalCharacteristicsList: [GeneralCharachteristicsModel]? = nil, peromanceList: [PerformanceModel]? = nil, combatHistoryList: [CombatHistoryModel]? = nil, armamentList: [ArmamentModel]? = nil, picturesList: [String]? = nil) {
+    init(flightname: String = "Default", flightID: Int? = nil, flightStringId: String? = nil, generalInfo: GeneralInfoModel? = nil, interestingFactsList: [InterestingFactModel]? = nil, flightOperatorsList: [FlightOperatorModel]? = nil, generalCharacteristicsList: [GeneralCharachteristicsModel]? = nil, peromanceList: [PerformanceModel]? = nil, combatHistoryList: [CombatHistoryModel]? = nil, armamentList: [ArmamentModel]? = nil, picturesList: [String]? = nil) {
         self.flightname = flightname
         self.flightID = flightID
         self.flightStringId = flightStringId
@@ -67,6 +67,7 @@ class FighterModel{
         self.armamentList = armamentList
         self.picturesList = picturesList
     }
+    
     
     
     init(flightname:String){
