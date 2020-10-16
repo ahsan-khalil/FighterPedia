@@ -33,4 +33,10 @@ class SingleCellTableViewCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+         super.prepareForReuse()
+         dataStr = nil
+         labelText.text = ""
+    }
+    
 }

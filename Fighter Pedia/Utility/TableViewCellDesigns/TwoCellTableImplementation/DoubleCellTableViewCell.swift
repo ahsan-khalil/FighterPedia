@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class DoubleCellTableViewCell: UITableViewCell {
 
     static let identifier = "DoubleCellTableViewCell"
@@ -40,6 +39,12 @@ class DoubleCellTableViewCell: UITableViewCell {
     func setData(title:String, description:String){
         labelTitle.text = title
         labelDescription.text = description
+    }
+    
+    override func prepareForReuse() {
+         super.prepareForReuse()
+        labelTitle.text = ""
+        labelDescription.text = ""
     }
     
 }

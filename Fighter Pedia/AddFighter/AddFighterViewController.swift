@@ -4,129 +4,11 @@
 //
 //  Created by Ahsan Khalil🤕 on 12/10/2020.
 //
-/****************************************/
-/*----------Start Table View Extensions--------*/
-extension UITableView {
-    @objc func getCellRowCount() -> Int {
-        0
-    }
-    @objc func getSelectedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SingleCellTableViewCell.identifier)
-        return cell!
-    }
-    
-    
-}
-
-
-class UISingleCeTableView:UITableView {
-    var mtextData:[String]!
-    func setData(textData:[String]){
-        mtextData = textData
-        reloadData()
-    }
-    
-    override func getCellRowCount() -> Int {
-        return mtextData.count
-    }
-    
-    override func getSelectedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SingleCellTableViewCell.identifier) as! SingleCellTableViewCell
-        
-        cell.setData(text: mtextData[indexPath.row])
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        cell.layer.cornerRadius = 3
-        return cell
-    }
-}
-
-class TwoCellTableView:UITableView {
-    var mdata:[KeyValuePair]!
-    override func getCellRowCount() -> Int {
-        print("count: \(mdata.count)")
-        return mdata.count
-    }
-    
-    override func getSelectedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DoubleCellTableViewCell.identifier) as! DoubleCellTableViewCell
-        cell.setData(title: mdata[indexPath.row].title, description: mdata[indexPath.row].detail)
-        print("2 table view: title: \(mdata[indexPath.row].title) , description: \(mdata[indexPath.row].detail)")
-        
-        return cell
-    }
-    func setData(Data mdata:[KeyValuePair]){
-        self.mdata = mdata
-        reloadData()
-    }
-}
-/*----------End Table View Extensions--------*/
-/****************************************/
-
-/****************************************/
-/*----------Start Collection View Extensions--------*/
-extension UICollectionView {
-    @objc func getCellRowCount() -> Int {
-        0
-    }
-    @objc func getSelectedCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell  =  collectionView.dequeueReusableCell(withReuseIdentifier: SingleSmallPicCollectionViewCell.identifier, for: indexPath)
-        return cell
-    }
-    
-    @objc func resizeCell() -> CGSize {
-        return CGSize(width: 240, height: 240)
-    }
-}
-
-class SinglePicCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout {
-    var imageDataList:[UIImage]!
-    override func getCellRowCount() -> Int {
-        imageDataList.count
-    }
-    override func getSelectedCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleSmallPicCollectionViewCell.identifier, for: indexPath) as! SingleSmallPicCollectionViewCell
-        let im = Utility.resizeImage(image: imageDataList[indexPath.row], newWidth:60)
-        
-
-        
-        cell.setImage(image: im)
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        cell.layer.cornerRadius = 3
-        return cell
-    }
-    func setData(imgList:[UIImage]){
-        imageDataList = imgList
-        reloadData()
-    }
-    
-    override func resizeCell() -> CGSize {
-        return CGSize(width: 60, height: 60)
-    }
-}
-
-/*----------End Table View Extensions--------*/
-/****************************************/
-
 import UIKit
 
 class AddFighterViewController: UIViewController {
 
-    var operatorImgList = [ImageDataContainer]()
-    var gallaryImgList = [ImageDataContainer]()
-    var operatorUIImageList = [UIImage]()
-    var selectedUIImagesList = [UIImage]()
-    
-    //GI
-    var GIUserList = [String]()
-    //GC
-    var GCList = [KeyValuePair]()
-    //P
-    var Plist = [KeyValuePair]()
-    
-    
+
     static let identifier = "AddFighterViewCollection"
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -141,8 +23,8 @@ class AddFighterViewController: UIViewController {
     @IBOutlet weak var inputGIUsername: UITextField!
     @IBOutlet weak var tableViewGI: UISingleCeTableView!
     @IBAction func onClickAddGIUser(_ sender: UIButton) {
-        GIUserList.append(inputGIUsername.text!)
-        tableViewGI.setData(textData: GIUserList)
+        tableViewGI.appendElement(element: inputGIUsername.text!)
+        tableViewGI.reloadData()
     }
     //General Characteristics
     @IBOutlet weak var inputGCTitle: UITextField!
@@ -150,8 +32,8 @@ class AddFighterViewController: UIViewController {
     
     @IBOutlet weak var tableViewGC: TwoCellTableView!
     @IBAction func onClickGCAddInfo(_ sender: UIButton) {
-        GCList.append(KeyValuePair(title: inputGCTitle.text!, detail: inputGCDetail.text!))
-        tableViewGC.setData(Data: GCList)
+        tableViewGC.appendElement(element: KeyValuePair(title: inputGCTitle.text!, detail: inputGCDetail.text!))
+        tableViewGC.reloadData()
     }
     
     //Performance
@@ -159,8 +41,8 @@ class AddFighterViewController: UIViewController {
     @IBOutlet weak var inputP_detail: UITextField!
     @IBOutlet weak var tableViewP: TwoCellTableView!
     @IBAction func onClickP_Add(_ sender: UIButton) {
-        Plist.append(KeyValuePair(title: inputP_Title.text!, detail: inputP_detail.text!))
-        tableViewP.setData(Data: Plist)
+        tableViewP.appendElement(element: KeyValuePair(title: inputP_Title.text!, detail: inputP_detail.text!))
+        tableViewP.reloadData()
     }
     
     //Operators
@@ -196,6 +78,7 @@ class AddFighterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Fighter"
+        
         /***************************************/
         /*---  Start Rounding   Layers-----*/
         for label in All_labelCollection {
@@ -220,7 +103,6 @@ class AddFighterViewController: UIViewController {
             table.layer.masksToBounds = true
             table.layer.cornerRadius = 5
         }
-        
         /*---  End Rounding Layers    -----*/
         /***************************************/
         
@@ -237,77 +119,72 @@ class AddFighterViewController: UIViewController {
         collectionViewImages.delegate = self
         collectionViewOperators.dataSource = self
         collectionViewImages.dataSource = self
-        
         /*---  End Collection Delegations -----*/
         /***************************************/
         
         
         /***************************************/
         /*---  Start GI Intialization -----*/
-        
         tableViewGI.register(SingleCellTableViewCell.nib(), forCellReuseIdentifier: SingleCellTableViewCell.identifier)
-        
-        tableViewGI.setData(textData: GIUserList)
-        
-        
-        
-        
-        
+        tableViewGI.setDataSource(textData: [String]())
+        tableViewGI.rowHeight = UITableView.automaticDimension
+        tableViewGI.estimatedRowHeight = 600
         /*---  End GI Intialization   -----*/
         /**************************************/
        
+        
+        
         /***************************************/
         /*---  Start GC Intialization -----*/
-        
-        
         let cell1 = DoubleCellTableViewCell()
         tableViewGC.register(cell1.nib(), forCellReuseIdentifier: DoubleCellTableViewCell.identifier)
-        
-        tableViewGC.setData(Data: GCList)
-        
-        
+        tableViewGC.setDataSource(Data: [KeyValuePair]())
+        tableViewGC.rowHeight = UITableView.automaticDimension
+        tableViewGC.estimatedRowHeight = 600
         /*---  End GC Intialization   -----*/
         /**************************************/
         
+        
+        
+        
         /***************************************/
         /*---  Start Perf Intialization -----*/
-        
         let cell2 = DoubleCellTableViewCell()
         tableViewP.register(cell2.nib(), forCellReuseIdentifier: DoubleCellTableViewCell.identifier)
-        
-        tableViewP.setData(Data: Plist)
-        
-        
+        tableViewP.setDataSource(Data: [KeyValuePair]())
+        tableViewP.rowHeight = UITableView.automaticDimension
+        tableViewP.estimatedRowHeight = 600
         /*---  End Perf Intialization   -----*/
         /**************************************/
         
+        
+        
         /**********************************************/
         /*---  Start Operators Intialization -----*/
-        
         let operatorCell = SingleSmallPicCollectionViewCell()
         collectionViewOperators.register(operatorCell.nib(), forCellWithReuseIdentifier: SingleSmallPicCollectionViewCell.identifier)
-        collectionViewOperators.setData(imgList: [UIImage]())
-        
-        
+        collectionViewOperators.setDataSource(imgList: [ImageDataContainer]())
         /*---  End Operators Intialization   -----*/
         /**********************************************/
+        
+        
+        
         
         /*******************************************/
         /*---  Start Images Intialization -----*/
         let imageCell = SingleSmallPicCollectionViewCell()
         collectionViewImages.register(imageCell.nib(), forCellWithReuseIdentifier: SingleSmallPicCollectionViewCell.identifier)
-        collectionViewImages.setData(imgList: [UIImage]())
+        collectionViewImages.setDataSource(imgList: [ImageDataContainer]())
         
         /*---  End Images Intialization   -----*/
         /*******************************************/
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Fighter", style: .plain, target: self, action: #selector(addFighter))
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(addFighter))
         
     }
+    
     @objc func addFighter(){
-        
-        
-        
         let fighterModel = FighterModel()
         fighterModel.flightname = inputFighterName.text!
         
@@ -324,21 +201,23 @@ class AddFighterViewController: UIViewController {
         
         //Primary Users
         var userList = [PrimaryUsersModel]()
+        let GIUserList = tableViewGI.getDataSource()
         for user in GIUserList {
             userList.append(PrimaryUsersModel(username: user))
         }
         
         let generalInfoModel = GeneralInfoModel(role: role, manufacturer: manufacturer, designedBy: desginedBy, FirstFlight: date!, introduced: Int(introduced) ?? 1900, retired: retired, PrimaryUsers: userList, numberBuilt: numberBuilt)
-        
         fighterModel.generalInfo = generalInfoModel
         
         var genCharacterisiticsList = [GeneralCharachteristicsModel]()
+        let GCList = tableViewGC.getDataSource()
         for gc in GCList {
             genCharacterisiticsList.append(GeneralCharachteristicsModel(title: gc.title, detail: gc.detail))
         }
         fighterModel.generalCharacteristicsList = genCharacterisiticsList
         
         var genPerforamanceList = [PerformanceModel]()
+        let Plist = tableViewP.getDataSource()
         for perf in Plist {
             genPerforamanceList.append(PerformanceModel(title: perf.title, detail: perf.detail))
         }
@@ -346,17 +225,18 @@ class AddFighterViewController: UIViewController {
         fighterModel.peromanceList = genPerforamanceList
         
         var operatorModelList = [FlightOperatorModel]()
+        let operatorImgList = collectionViewOperators.getDataSource()
         for op in operatorImgList {
             operatorModelList.append(FlightOperatorModel(countryName: op.img, countryFlag: op.img))
         }
-        
         fighterModel.flightOperatorsList = operatorModelList
         
         var tempGallaryImagesList = [String]()
+        let gallaryImgList = collectionViewImages.getDataSource()
         for img in gallaryImgList {
+            Utility.saveImage(imageName: img.img, image: img.uiImage)
             tempGallaryImagesList.append(img.img)
         }
-        
         fighterModel.picturesList = tempGallaryImagesList
         
         print(fighterModel.flightname)
@@ -366,6 +246,7 @@ class AddFighterViewController: UIViewController {
         print(fighterModel.picturesList[0])
         
         print("right button tapped")
+        
         FighterRepository.AddFighterList(fighterModel: fighterModel)
         
     }
@@ -382,7 +263,13 @@ extension AddFighterViewController : UITableViewDelegate,UITableViewDataSource {
         return tableView.getSelectedCell(tableView, cellForRowAt: indexPath)
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        tableView.slideLeft(tableView, commit: editingStyle, forRowAt: indexPath)
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.onClickEditWithAlertController(index :indexPath,viewController: self)
+    }
 }
 
 extension AddFighterViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -397,34 +284,43 @@ extension AddFighterViewController : UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.resizeCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let refreshAlert = UIAlertController(title: "Alert", message: "Do You want to delete it?", preferredStyle: .alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {
+            (action: UIAlertAction!) in
+            collectionView.deleteSelectedRow(index: indexPath)
+                print("Handle Ok logic here")
+          }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (action: UIAlertAction!) in
+                print("Handle Cancel Logic here")
+          }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
 }
 
-
+//A delegator to get data from next activity
 extension AddFighterViewController:ImageCollectionSelectorDelegator {
     func getSelectedImageName(imgStr: String) {
-        print(imgStr)
-        self.operatorImgList.append(ImageDataContainer(img: imgStr))
-        self.operatorUIImageList.append(UIImage(named: imgStr)!)
-        collectionViewOperators.setData(imgList: self.operatorUIImageList)
+        collectionViewOperators.appendElement(element: ImageDataContainer(img: imgStr,uiImage: UIImage(named: imgStr)!))
+        collectionViewOperators.reloadData()
     }
 }
 
 extension AddFighterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            print(image)
-            
-            
             print("Image taken")
             let imageName = Utility.getUniqueImageName(picFormate: "png")
-            Utility.saveImage(imageName: imageName, image: image)
-            self.selectedUIImagesList.append(image)
-            self.gallaryImgList.append(ImageDataContainer(img: imageName))
-            collectionViewImages.setData(imgList: self.selectedUIImagesList)
+            collectionViewImages.appendElement(element: ImageDataContainer(img: imageName, uiImage: image))
+            collectionViewImages.reloadData()
         } else {
             print("error in selecting")
         }
-        
         picker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

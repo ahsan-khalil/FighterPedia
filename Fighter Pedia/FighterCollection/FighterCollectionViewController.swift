@@ -39,10 +39,8 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
         cell.layer.borderWidth = 2
         cell.layer.borderColor = #colorLiteral(red: 0.06467689574, green: 0.04641190916, blue: 0.1739622355, alpha: 1)
         let selectedFighter = self.flightList[indexPath.row]
-        cell.configure(flightName: selectedFighter.flightname, FlightImage: selectedFighter.picturesList[0])
-
-        
-        
+        print(selectedFighter.picturesList[0])
+        cell.configure(flightName: selectedFighter.flightname, FlightImage: Utility.retriveImage(imageName: selectedFighter.picturesList[0]) ?? UIImage(named: "aapLogo")!)
         return cell
     }
     
@@ -52,16 +50,9 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
         return CGSize(width: UIScreen.main.bounds.width - 30, height: 300)
         }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("i was clicked")
-        
         let selectedFighter = self.flightList[indexPath.row]
-        
-        
         let vc = storyboard?.instantiateViewController(identifier: FighterDetailViewController.reuseIdentifier) as! FighterDetailViewController
         vc.selectedFighter = selectedFighter
-        
         navigationController?.pushViewController(vc, animated: true)
-        
-        
     }
 }

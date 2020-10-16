@@ -85,7 +85,7 @@ class Utility
            return image
         }else{
            print("Panic! No Image!")
-            return nil
+            return UIImage(named: "appLogo")
         }
      }
     static func getUniqueImageName(picFormate:String) -> String {

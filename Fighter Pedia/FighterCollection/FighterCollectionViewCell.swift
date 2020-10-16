@@ -26,9 +26,9 @@ class FighterCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure(flightName:String, FlightImage:String){
+    func configure(flightName:String, FlightImage:UIImage){
         labelFlightName.text = flightName
-        imageViewFlight.image = UIImage(named: FlightImage)
+        imageViewFlight.image = FlightImage
     }
     
     static func nib() -> UINib {
