@@ -72,9 +72,12 @@
 		8BC0C487252F26CF0075F7E1 /* ImageDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C486252F26CF0075F7E1 /* ImageDataContainer.swift */; };
 		8BC0C48A252F2EE20075F7E1 /* SingleWallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0C489252F2EE20075F7E1 /* SingleWallpaperViewController.swift */; };
 		8BF7808425309993000236EB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF7808325309993000236EB /* Utility.swift */; };
+		F1553759DC1FCDD1470DEEE6 /* Pods_Fighter_Pedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9EBF3B8F10F2051791BEDE /* Pods_Fighter_Pedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020209262707B438B7DD7749 /* Pods-Fighter Pedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fighter Pedia.release.xcconfig"; path = "Target Support Files/Pods-Fighter Pedia/Pods-Fighter Pedia.release.xcconfig"; sourceTree = "<group>"; };
+		346809EC3C7569DA23276021 /* Pods-Fighter Pedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fighter Pedia.debug.xcconfig"; path = "Target Support Files/Pods-Fighter Pedia/Pods-Fighter Pedia.debug.xcconfig"; sourceTree = "<group>"; };
 		8B3D0B0C25231B8400E3408C /* Fighter Pedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fighter Pedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3D0B0F25231B8400E3408C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B3D0B1125231B8400E3408C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		8BC0C486252F26CF0075F7E1 /* ImageDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataContainer.swift; sourceTree = "<group>"; };
 		8BC0C489252F2EE20075F7E1 /* SingleWallpaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleWallpaperViewController.swift; sourceTree = "<group>"; };
 		8BF7808325309993000236EB /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		CC9EBF3B8F10F2051791BEDE /* Pods_Fighter_Pedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fighter_Pedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,17 +154,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1553759DC1FCDD1470DEEE6 /* Pods_Fighter_Pedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BEDDD5CE3F01A1FE022CD70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC9EBF3B8F10F2051791BEDE /* Pods_Fighter_Pedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B3D0B0325231B8400E3408C = {
 			isa = PBXGroup;
 			children = (
 				8B3D0B0E25231B8400E3408C /* Fighter Pedia */,
 				8B3D0B0D25231B8400E3408C /* Products */,
+				C35E7CA10F94D3A332C34169 /* Pods */,
+				3BEDDD5CE3F01A1FE022CD70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -365,6 +380,16 @@
 			path = AddFighter;
 			sourceTree = "<group>";
 		};
+		C35E7CA10F94D3A332C34169 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				346809EC3C7569DA23276021 /* Pods-Fighter Pedia.debug.xcconfig */,
+				020209262707B438B7DD7749 /* Pods-Fighter Pedia.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,9 +397,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B3D0B2025231B8500E3408C /* Build configuration list for PBXNativeTarget "Fighter Pedia" */;
 			buildPhases = (
+				B032C9118B292355674EBCCD /* [CP] Check Pods Manifest.lock */,
 				8B3D0B0825231B8400E3408C /* Sources */,
 				8B3D0B0925231B8400E3408C /* Frameworks */,
 				8B3D0B0A25231B8400E3408C /* Resources */,
+				11593F8EA078A8B444383692 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -437,6 +464,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11593F8EA078A8B444383692 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fighter Pedia/Pods-Fighter Pedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fighter Pedia/Pods-Fighter Pedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fighter Pedia/Pods-Fighter Pedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B032C9118B292355674EBCCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fighter Pedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B3D0B0825231B8400E3408C /* Sources */ = {
@@ -640,6 +709,7 @@
 		};
 		8B3D0B2125231B8500E3408C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346809EC3C7569DA23276021 /* Pods-Fighter Pedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -660,6 +730,7 @@
 		};
 		8B3D0B2225231B8500E3408C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 020209262707B438B7DD7749 /* Pods-Fighter Pedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

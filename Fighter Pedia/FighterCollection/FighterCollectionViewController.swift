@@ -44,8 +44,6 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
         return cell
     }
     
-   
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - 30, height: 300)
         }

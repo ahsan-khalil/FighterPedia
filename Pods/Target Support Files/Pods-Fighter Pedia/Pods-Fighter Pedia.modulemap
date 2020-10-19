@@ -1,0 +1,6 @@
+framework module Pods_Fighter_Pedia {
+  umbrella header "Pods-Fighter Pedia-umbrella.h"
+
+  export *
+  module * { export * }
+}
