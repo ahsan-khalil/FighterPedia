@@ -1,20 +1,20 @@
 PODS:
-  - CalendarView (1.1.2):
-    - SwiftMoment (~> 0.1)
-  - SwiftMoment (0.7)
+  - DatePicker (1.3.1):
+    - Extended
+  - Extended (1.0.5)
 
 DEPENDENCIES:
-  - CalendarView
+  - DatePicker (~> 1.3.0)
 
 SPEC REPOS:
   trunk:
-    - CalendarView
-    - SwiftMoment
+    - DatePicker
+    - Extended
 
 SPEC CHECKSUMS:
-  CalendarView: 35d51b70586213604edec22a585d105273f6e191
-  SwiftMoment: dc6dd27012e267819104cbb03f74ff9192dd0b42
+  DatePicker: 05ddbd2b57d00ce6f44c1f0611ced32f948d33a6
+  Extended: c463225e0c29b2823847866c1b106827772ac678
 
-PODFILE CHECKSUM: dddc9265d17d6a971f0bc4afb33d7b9c00997748
+PODFILE CHECKSUM: 68e46857f84933ddded1716d0404ffa2abbc04dc
 
 COCOAPODS: 1.9.3

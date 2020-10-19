@@ -5,6 +5,9 @@
 //  Created by Ahsan Khalil🤕 on 12/10/2020.
 //
 import UIKit
+import DatePicker
+
+
 
 class AddFighterViewController: UIViewController {
 
@@ -181,6 +184,25 @@ class AddFighterViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Fighter", style: .plain, target: self, action: #selector(addFighter))
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(addFighter))
+        
+        
+        
+    
+        //Colander View
+//        let calendarView = CalendarView()
+//
+//        // Optional (but probably something you'll want to do): register cell and header types
+//        // NOTE: both of these must conform to the Dated protcol, which mandates they have a Date? var with public get and set
+//
+//        // Wire up datasource and delegate
+//        calendarView.dataSource = self
+//        calendarView.delegate = self
+//        view.addSubview(calendarView)
+//
+//        // Assuming you're using SnapKit...
+//        calendarView.snp.makeConstraints { make in
+//            make.edges.equalToSuperview()
+//        }
         
     }
     

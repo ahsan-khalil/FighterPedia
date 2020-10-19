@@ -6,5 +6,5 @@ target 'Fighter Pedia' do
   use_frameworks!
 
   # Pods for Fighter Pedia
-  pod "CalendarView"
+  pod 'DatePicker', '~> 1.3.0'
 end
