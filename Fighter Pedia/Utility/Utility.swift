@@ -64,6 +64,13 @@ class Utility
         return firstdate
     }
     
+    static func convertDateToStr(date:Date,formate:String) -> String {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = formate
+        
+        return dateFormatterPrint.string(from: date)
+    }
+    
     static func saveImage(imageName: String, image:UIImage){
        //create an instance of the FileManager
        let fileManager = FileManager.default

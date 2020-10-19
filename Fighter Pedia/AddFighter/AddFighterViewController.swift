@@ -125,6 +125,16 @@ class AddFighterViewController: UIViewController {
         /*---  End Collection Delegations -----*/
         /***************************************/
         
+        /***************************************/
+        /*--- Start Input Delegation -----*/
+        
+        inputGIFirstFlight.delegate = self
+        inputGIFirstFlight.tag = 1
+        inputGIIntroduced.delegate = self
+        inputGIIntroduced.tag = 2
+        /*---  End Input Delegations -----*/
+        /***************************************/
+        
         
         /***************************************/
         /*---  Start GI Intialization -----*/
@@ -272,6 +282,31 @@ class AddFighterViewController: UIViewController {
         FighterRepository.AddFighterList(fighterModel: fighterModel)
         
     }
+    
+//    func getDateFromDatePicker() -> Date? {
+//        
+//        var tempdate:Date?
+//        let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1990)!
+//                let maxDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 2030)!
+//                let today = Date()
+//                // Create picker object
+//                let datePicker = DatePicker()
+//                // Setup
+//        
+//                datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
+//                    if selected, let selectedDate = date {
+//                        print(selectedDate.string())
+//                        tempdate = selectedDate
+//                        
+//                    } else {
+//                        print("Cancelled")
+//                        
+//                    }
+//                }
+//                // Display
+//                datePicker.show(in: self)
+//        return tempdate
+//    }
 }
 
 
@@ -347,5 +382,41 @@ extension AddFighterViewController: UIImagePickerControllerDelegate, UINavigatio
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+
+//Tag = 1 InputGIFirstFlight
+//Tag = 2 InputGIIntroduced
+extension AddFighterViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if(textField.tag == 1 || textField.tag == 2){
+            let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1990)!
+                    let maxDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 2030)!
+                    let today = Date()
+                    // Create picker object
+                    let datePicker = DatePicker()
+                    // Setup
+            
+                    datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
+                        if selected, let selectedDate = date {
+                            print(selectedDate.string())
+                            
+                            textField.text = Utility.convertDateToStr(date: selectedDate, formate: "dd MMM yyyy")
+                            
+                            
+                        } else {
+                            print("Cancelled")
+                            
+                        }
+                    }
+                    // Display
+                    datePicker.show(in: self)
+        }
+        print("start editing")
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("end editing")
     }
 }
