@@ -39,8 +39,14 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
         cell.layer.borderWidth = 2
         cell.layer.borderColor = #colorLiteral(red: 0.06467689574, green: 0.04641190916, blue: 0.1739622355, alpha: 1)
         let selectedFighter = self.flightList[indexPath.row]
-        print(selectedFighter.picturesList[0])
-        cell.configure(flightName: selectedFighter.flightname, FlightImage: Utility.retriveImage(imageName: selectedFighter.picturesList[0]) ?? UIImage(named: "aapLogo")!)
+        
+        var selectedFighterImage:UIImage!
+        if(selectedFighter.picturesList.count>0){
+            selectedFighterImage = Utility.retriveImage(imageName: selectedFighter.picturesList[0]) ?? UIImage(named: "no_image_available")!
+        } else {
+            selectedFighterImage = UIImage(named: "no_image_available")!
+        }
+        cell.configure(flightName: selectedFighter.flightname, FlightImage: selectedFighterImage)
         return cell
     }
     

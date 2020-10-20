@@ -26,8 +26,13 @@ class AddFighterViewController: UIViewController {
     @IBOutlet weak var inputGIUsername: UITextField!
     @IBOutlet weak var tableViewGI: UISingleCeTableView!
     @IBAction func onClickAddGIUser(_ sender: UIButton) {
-        tableViewGI.appendElement(element: inputGIUsername.text!)
-        tableViewGI.reloadData()
+        if(Utility.validateInputForEmptyFields(inputCollection: [inputGIUsername])){
+            tableViewGI.appendElement(element: inputGIUsername.text!)
+            tableViewGI.reloadData()
+        } else {
+            Utility.showToast(message: "Enter Username First", viewController: self)
+        }
+        
     }
     //General Characteristics
     @IBOutlet weak var inputGCTitle: UITextField!
@@ -35,8 +40,12 @@ class AddFighterViewController: UIViewController {
     
     @IBOutlet weak var tableViewGC: TwoCellTableView!
     @IBAction func onClickGCAddInfo(_ sender: UIButton) {
-        tableViewGC.appendElement(element: KeyValuePair(title: inputGCTitle.text!, detail: inputGCDetail.text!))
-        tableViewGC.reloadData()
+        if(Utility.validateInputForEmptyFields(inputCollection: [inputGCTitle,inputGCDetail])){
+            tableViewGC.appendElement(element: KeyValuePair(title: inputGCTitle.text!, detail: inputGCDetail.text!))
+            tableViewGC.reloadData()
+        } else {
+            Utility.showToast(message: "Enter Title and Detail First", viewController: self)
+        }
     }
     
     //Performance
@@ -44,8 +53,12 @@ class AddFighterViewController: UIViewController {
     @IBOutlet weak var inputP_detail: UITextField!
     @IBOutlet weak var tableViewP: TwoCellTableView!
     @IBAction func onClickP_Add(_ sender: UIButton) {
-        tableViewP.appendElement(element: KeyValuePair(title: inputP_Title.text!, detail: inputP_detail.text!))
-        tableViewP.reloadData()
+        if(Utility.validateInputForEmptyFields(inputCollection: [inputP_Title,inputP_detail])){
+            tableViewP.appendElement(element: KeyValuePair(title: inputP_Title.text!, detail: inputP_detail.text!))
+            tableViewP.reloadData()
+        }else {
+            Utility.showToast(message: "Enter Title and Detail First", viewController: self)
+        }
     }
     
     //Operators
@@ -73,6 +86,8 @@ class AddFighterViewController: UIViewController {
     @IBOutlet var collectionViewList: [UICollectionView]!
     @IBOutlet var collection_Button: [UIButton]!
     @IBOutlet var tableViewCollection: [UITableView]!
+    
+    @IBOutlet var inputCollection: [UITextField]!
     @IBOutlet weak var inputFighterName: UITextField!
     
     
@@ -132,6 +147,8 @@ class AddFighterViewController: UIViewController {
         inputGIFirstFlight.tag = 1
         inputGIIntroduced.delegate = self
         inputGIIntroduced.tag = 2
+        inputGINumberBuilt.delegate = self
+        inputGINumberBuilt.tag = 3
         /*---  End Input Delegations -----*/
         /***************************************/
         
@@ -195,28 +212,42 @@ class AddFighterViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Fighter", style: .plain, target: self, action: #selector(addFighter))
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(addFighter))
         
-        
-        
-    
-        //Colander View
-//        let calendarView = CalendarView()
-//
-//        // Optional (but probably something you'll want to do): register cell and header types
-//        // NOTE: both of these must conform to the Dated protcol, which mandates they have a Date? var with public get and set
-//
-//        // Wire up datasource and delegate
-//        calendarView.dataSource = self
-//        calendarView.delegate = self
-//        view.addSubview(calendarView)
-//
-//        // Assuming you're using SnapKit...
-//        calendarView.snp.makeConstraints { make in
-//            make.edges.equalToSuperview()
-//        }
-        
     }
     
-    @objc func addFighter(){
+    func validateInput() -> Bool {
+        if(!(Utility.validateInputForEmptyFields(inputCollection: inputCollection))){
+            Utility.generateAlertBox(title: "Alert", message: "Please Enter All input Fileds", viewController: self)
+            return false
+        }
+        
+        if(tableViewGI.getDataSource().count == 0){
+            Utility.generateAlertBox(title: "Alert", message: "Add Atleast 1 user", viewController: self)
+            return false
+        }
+        
+        if(tableViewGC.getDataSource().count == 0){
+            Utility.generateAlertBox(title: "Alert", message: "Add atleast 1 Characteristic", viewController: self)
+            return false
+        }
+        
+        if(tableViewP.getDataSource().count == 0){
+            Utility.generateAlertBox(title: "Alert", message: "Add atleast 1 Performance", viewController: self)
+            return false
+        }
+        
+        if(collectionViewOperators.getDataSource().count == 0) {
+            Utility.generateAlertBox(title: "Alert", message: "Add atleast 1 Operator", viewController: self)
+            return false
+        }
+        
+        if(collectionViewImages.getDataSource().count == 0) {
+            Utility.generateAlertBox(title: "Alert", message: "Add atleast 1 Image", viewController: self)
+            return false
+        }
+        return true
+    }
+    
+    func addFighterInDB() {
         let fighterModel = FighterModel()
         fighterModel.flightname = inputFighterName.text!
         
@@ -270,21 +301,22 @@ class AddFighterViewController: UIViewController {
             tempGallaryImagesList.append(img.img)
         }
         fighterModel.picturesList = tempGallaryImagesList
-        
-        print(fighterModel.flightname)
-        print(fighterModel.flightOperatorsList.count)
-        print(fighterModel.flightOperatorsList[0].countryName)
-        print(fighterModel.picturesList.count)
-        print(fighterModel.picturesList[0])
-        
-        print("right button tapped")
-        
         FighterRepository.AddFighterList(fighterModel: fighterModel)
-        
     }
     
+    @objc func addFighter(){
+        if (validateInput()){
+            addFighterInDB()
+            Utility.showToast(message: "Fighter Added", viewController: self)
+            navigationController?.popViewController(animated: true)
+        }
+        print("right button tapped")
+    }
+    
+    
+    
 //    func getDateFromDatePicker() -> Date? {
-//        
+//
 //        var tempdate:Date?
 //        let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1990)!
 //                let maxDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 2030)!
@@ -292,15 +324,15 @@ class AddFighterViewController: UIViewController {
 //                // Create picker object
 //                let datePicker = DatePicker()
 //                // Setup
-//        
+//
 //                datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
 //                    if selected, let selectedDate = date {
 //                        print(selectedDate.string())
 //                        tempdate = selectedDate
-//                        
+//
 //                    } else {
 //                        print("Cancelled")
-//                        
+//
 //                    }
 //                }
 //                // Display
@@ -389,6 +421,7 @@ extension AddFighterViewController: UIImagePickerControllerDelegate, UINavigatio
 
 //Tag = 1 InputGIFirstFlight
 //Tag = 2 InputGIIntroduced
+//Tag = 3 InputGINumberBuild
 extension AddFighterViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if(textField.tag == 1 || textField.tag == 2){
@@ -419,4 +452,17 @@ extension AddFighterViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("end editing")
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.tag == 3 {
+                let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+                let characterSet = CharacterSet(charactersIn: string)
+                if(!(allowedCharacters.isSuperset(of: characterSet))){
+                    Utility.showToast(message: "Enter Numeric Numbers Only", viewController: self)
+                }
+                return allowedCharacters.isSuperset(of: characterSet)
+            }
+            return true
+    }
+    
 }
