@@ -18,159 +18,164 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-NU-Cq4">
-                                <rect key="frame" x="75" y="235" width="120" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-mt-Agg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-Fa-S55">
+                                        <rect key="frame" x="217" y="130" width="182" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="U4e-FJ-quL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                        <state key="normal" title="Eras">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickEras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Civ-hi-PRl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-iv-zzI">
+                                        <rect key="frame" x="109.5" y="450" width="195" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Guess the Plane">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-W5-3Pd">
+                                        <rect key="frame" x="109.5" y="370" width="195" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Glossary">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XRB-Us-DEs">
+                                        <rect key="frame" x="109.5" y="530" width="195" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Credits">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tib-9a-e3J">
+                                        <rect key="frame" x="15" y="130" width="182" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="v2E-km-xge"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                        <state key="normal" title="Name">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickNameBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8e-nZ-czA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TxW-cl-2PG">
+                                        <rect key="frame" x="109.5" y="210" width="195" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="qzC-4f-4Y6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Compare Fighters">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-uK-Bod">
+                                        <rect key="frame" x="109.5" y="290" width="195" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Wallpapers">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEj-sJ-ZT3">
+                                        <rect key="frame" x="15" y="40" width="384" height="60"/>
+                                        <color key="backgroundColor" red="0.96592551469999999" green="0.98531264070000002" blue="0.98845762010000005" alpha="0.046714469180000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HZ1-Ts-44G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4So-oI-I8Q"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="hV0-cn-yQt"/>
+                                    <constraint firstItem="Tib-9a-e3J" firstAttribute="top" secondItem="VEj-sJ-ZT3" secondAttribute="bottom" constant="30" id="2ze-TJ-NCw"/>
+                                    <constraint firstItem="Yf5-iv-zzI" firstAttribute="height" secondItem="TxW-cl-2PG" secondAttribute="height" id="43n-1T-Fuf"/>
+                                    <constraint firstItem="VEj-sJ-ZT3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Mip-mt-Agg" secondAttribute="leading" constant="15" id="5nX-Fd-Obq"/>
+                                    <constraint firstItem="kuC-uK-Bod" firstAttribute="centerX" secondItem="TxW-cl-2PG" secondAttribute="centerX" id="6Fp-s4-d9w"/>
+                                    <constraint firstItem="Yf5-iv-zzI" firstAttribute="width" secondItem="TxW-cl-2PG" secondAttribute="width" id="7Q9-bW-rko"/>
+                                    <constraint firstItem="XRB-Us-DEs" firstAttribute="centerX" secondItem="TxW-cl-2PG" secondAttribute="centerX" id="8Ix-Zb-xTE"/>
+                                    <constraint firstItem="Yf5-iv-zzI" firstAttribute="top" secondItem="hH0-W5-3Pd" secondAttribute="bottom" constant="20" id="AdL-cN-LSy"/>
+                                    <constraint firstItem="Tib-9a-e3J" firstAttribute="leading" secondItem="Mip-mt-Agg" secondAttribute="leading" constant="15" id="CeN-D5-Vcd"/>
+                                    <constraint firstItem="hH0-W5-3Pd" firstAttribute="centerX" secondItem="TxW-cl-2PG" secondAttribute="centerX" id="DuR-9k-ddQ"/>
+                                    <constraint firstItem="kuC-uK-Bod" firstAttribute="width" secondItem="TxW-cl-2PG" secondAttribute="width" id="Gzk-nT-UJf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZIP-Fa-S55" secondAttribute="trailing" constant="15" id="IvG-eV-2Oo"/>
+                                    <constraint firstItem="hH0-W5-3Pd" firstAttribute="top" secondItem="kuC-uK-Bod" secondAttribute="bottom" constant="20" id="Jde-LN-rvT"/>
+                                    <constraint firstItem="XRB-Us-DEs" firstAttribute="width" secondItem="TxW-cl-2PG" secondAttribute="width" id="Lci-om-u4r"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRB-Us-DEs" secondAttribute="bottom" constant="20" id="MR9-Dw-cKZ"/>
+                                    <constraint firstItem="ZIP-Fa-S55" firstAttribute="top" secondItem="Tib-9a-e3J" secondAttribute="top" id="MtN-pC-fvc"/>
+                                    <constraint firstItem="hH0-W5-3Pd" firstAttribute="width" secondItem="TxW-cl-2PG" secondAttribute="width" id="OZB-F9-lvi"/>
+                                    <constraint firstItem="TxW-cl-2PG" firstAttribute="centerX" secondItem="Mip-mt-Agg" secondAttribute="centerX" id="Pn9-co-d37"/>
+                                    <constraint firstItem="XRB-Us-DEs" firstAttribute="height" secondItem="TxW-cl-2PG" secondAttribute="height" id="VB9-SR-9kG"/>
+                                    <constraint firstItem="kuC-uK-Bod" firstAttribute="top" secondItem="TxW-cl-2PG" secondAttribute="bottom" constant="20" id="Vgt-d1-Wn1"/>
+                                    <constraint firstItem="hH0-W5-3Pd" firstAttribute="height" secondItem="TxW-cl-2PG" secondAttribute="height" id="Y1c-Te-Ecx"/>
+                                    <constraint firstItem="ZIP-Fa-S55" firstAttribute="leading" secondItem="Tib-9a-e3J" secondAttribute="trailing" constant="20" id="YJm-cY-6Kr"/>
+                                    <constraint firstItem="kuC-uK-Bod" firstAttribute="height" secondItem="TxW-cl-2PG" secondAttribute="height" id="Z72-TD-y05"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VEj-sJ-ZT3" secondAttribute="trailing" constant="15" id="ZOI-yn-1Si"/>
+                                    <constraint firstItem="ZIP-Fa-S55" firstAttribute="width" secondItem="Tib-9a-e3J" secondAttribute="width" id="bL4-Uy-Dk9"/>
+                                    <constraint firstItem="VEj-sJ-ZT3" firstAttribute="top" secondItem="Mip-mt-Agg" secondAttribute="top" constant="40" id="cIz-hK-JE9"/>
+                                    <constraint firstItem="Tib-9a-e3J" firstAttribute="leading" secondItem="GmI-dU-UGk" secondAttribute="leading" constant="15" id="cok-ht-grG"/>
+                                    <constraint firstItem="VEj-sJ-ZT3" firstAttribute="centerX" secondItem="Mip-mt-Agg" secondAttribute="centerX" id="hpD-ND-Fni"/>
+                                    <constraint firstItem="XRB-Us-DEs" firstAttribute="top" secondItem="Yf5-iv-zzI" secondAttribute="bottom" constant="20" id="jmD-jg-7gc"/>
+                                    <constraint firstItem="Yf5-iv-zzI" firstAttribute="centerX" secondItem="TxW-cl-2PG" secondAttribute="centerX" id="kdR-49-3eW"/>
+                                    <constraint firstItem="TxW-cl-2PG" firstAttribute="top" secondItem="Tib-9a-e3J" secondAttribute="bottom" constant="20" id="nRQ-L2-QUE"/>
+                                    <constraint firstItem="GmI-dU-UGk" firstAttribute="trailing" secondItem="ZIP-Fa-S55" secondAttribute="trailing" constant="15" id="teg-cG-q0I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
-                                <state key="normal" title="Name">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickNameBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDY-7e-Q5I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTm-u3-Wf3">
-                                <rect key="frame" x="214" y="235" width="120" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8I3-2u-iFH"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="nIz-nY-0OK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
-                                <state key="normal" title="Eras">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickEras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sl1-C7-r6F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Ts-dod">
-                                <rect key="frame" x="103" y="315" width="224" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="841-uS-cIs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Compare Fighters">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VOH-27-18j">
-                                <rect key="frame" x="103" y="395" width="224" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="iuJ-SU-Xeu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Wallpapers">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mlP-0D-0a3" kind="show" id="hrV-Ir-TNJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dMI-9q-nsA">
-                                <rect key="frame" x="103" y="475" width="224" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="YsX-Rl-nbQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Glossary">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QhD-wQ-1Rf">
-                                <rect key="frame" x="103" y="555" width="224" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="RJS-Si-8Jh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Guess the Plane">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-k6-m2Y">
-                                <rect key="frame" x="103" y="635" width="224" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="pDn-wP-5G5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Credits">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIT-Yp-5Nk">
-                                <rect key="frame" x="50" y="120" width="314" height="60"/>
-                                <color key="backgroundColor" red="0.96592551469802856" green="0.98531264066696167" blue="0.98845762014389038" alpha="0.046714469178082189" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="BF6-AW-26q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wyp-C7-QSw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GmI-dU-UGk"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VOH-27-18j" secondAttribute="trailing" constant="87" id="6TM-Jk-seg"/>
-                            <constraint firstItem="VOH-27-18j" firstAttribute="top" secondItem="daU-Ts-dod" secondAttribute="bottom" constant="20" id="Buo-JC-hQD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dMI-9q-nsA" secondAttribute="trailing" constant="87" id="D4X-lZ-lyM"/>
-                            <constraint firstItem="QhD-wQ-1Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="MJy-nS-UHq"/>
-                            <constraint firstItem="daU-Ts-dod" firstAttribute="top" secondItem="Tyi-NU-Cq4" secondAttribute="bottom" constant="20" id="NMi-hM-dnj"/>
-                            <constraint firstItem="Tyi-NU-Cq4" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="OZd-5r-Qa3"/>
-                            <constraint firstItem="LTm-u3-Wf3" firstAttribute="leading" secondItem="Tyi-NU-Cq4" secondAttribute="trailing" constant="19" id="RlP-mD-Wta"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QhD-wQ-1Rf" secondAttribute="trailing" constant="87" id="Rsu-NZ-2DH"/>
-                            <constraint firstItem="s2d-k6-m2Y" firstAttribute="top" secondItem="QhD-wQ-1Rf" secondAttribute="bottom" constant="20" id="UQ0-Ps-kJG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="daU-Ts-dod" secondAttribute="trailing" constant="87" id="XOl-oI-hpO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OIT-Yp-5Nk" secondAttribute="trailing" constant="50" id="aFt-sv-isC"/>
-                            <constraint firstItem="dMI-9q-nsA" firstAttribute="top" secondItem="VOH-27-18j" secondAttribute="bottom" constant="20" id="auj-OY-gtw"/>
-                            <constraint firstItem="OIT-Yp-5Nk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="b3r-S0-s11"/>
-                            <constraint firstItem="s2d-k6-m2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="dU0-nF-aNA"/>
-                            <constraint firstItem="dMI-9q-nsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="gsE-7b-Kv4"/>
-                            <constraint firstItem="QhD-wQ-1Rf" firstAttribute="top" secondItem="dMI-9q-nsA" secondAttribute="bottom" constant="20" id="hZF-vx-Ccu"/>
-                            <constraint firstItem="Tyi-NU-Cq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="hrI-J0-GwN"/>
-                            <constraint firstItem="VOH-27-18j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="m5w-79-q0t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTm-u3-Wf3" secondAttribute="trailing" constant="80" id="mgY-9g-IDA"/>
-                            <constraint firstItem="daU-Ts-dod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="npl-mw-235"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s2d-k6-m2Y" secondAttribute="trailing" constant="87" id="utU-OA-teS"/>
-                            <constraint firstItem="OIT-Yp-5Nk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xY7-SK-mGM"/>
-                            <constraint firstItem="LTm-u3-Wf3" firstAttribute="top" secondItem="OIT-Yp-5Nk" secondAttribute="bottom" constant="55" id="zil-4w-nX2"/>
+                            <constraint firstItem="Mip-mt-Agg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fM-r5-Zi4"/>
+                            <constraint firstAttribute="bottom" secondItem="Mip-mt-Agg" secondAttribute="bottom" id="5uQ-yb-naT"/>
+                            <constraint firstItem="Mip-mt-Agg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OCV-lQ-L7h"/>
+                            <constraint firstItem="Mip-mt-Agg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PwV-Oh-qlF"/>
+                            <constraint firstItem="Mip-mt-Agg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kac-EA-KoT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="YHn-rU-F5t">
                         <barButtonItem key="backBarButtonItem" title="Back" id="KjF-Bw-Rgn"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="labelTitle" destination="OIT-Yp-5Nk" id="I0I-8Y-GSb"/>
-                        <outletCollection property="btnList" destination="Tyi-NU-Cq4" collectionClass="NSMutableArray" id="Xk2-ZG-Fy9"/>
-                        <outletCollection property="btnList" destination="LTm-u3-Wf3" collectionClass="NSMutableArray" id="Hkr-7p-yj2"/>
-                        <outletCollection property="btnList" destination="daU-Ts-dod" collectionClass="NSMutableArray" id="p0Z-n7-TkU"/>
-                        <outletCollection property="btnList" destination="VOH-27-18j" collectionClass="NSMutableArray" id="0YF-7v-448"/>
-                        <outletCollection property="btnList" destination="dMI-9q-nsA" collectionClass="NSMutableArray" id="lRR-un-vMe"/>
-                        <outletCollection property="btnList" destination="QhD-wQ-1Rf" collectionClass="NSMutableArray" id="ENF-CS-6A8"/>
-                        <outletCollection property="btnList" destination="s2d-k6-m2Y" collectionClass="NSMutableArray" id="TnP-cV-cqG"/>
+                        <outlet property="labelTitle" destination="VEj-sJ-ZT3" id="wDs-Tf-IM8"/>
+                        <outletCollection property="btnList" destination="Tib-9a-e3J" collectionClass="NSMutableArray" id="H88-Rr-JhQ"/>
+                        <outletCollection property="btnList" destination="ZIP-Fa-S55" collectionClass="NSMutableArray" id="SaS-zO-Z2I"/>
+                        <outletCollection property="btnList" destination="TxW-cl-2PG" collectionClass="NSMutableArray" id="brj-1t-PKQ"/>
+                        <outletCollection property="btnList" destination="kuC-uK-Bod" collectionClass="NSMutableArray" id="CkH-50-URY"/>
+                        <outletCollection property="btnList" destination="hH0-W5-3Pd" collectionClass="NSMutableArray" id="n1h-fg-Y8z"/>
+                        <outletCollection property="btnList" destination="Yf5-iv-zzI" collectionClass="NSMutableArray" id="NLm-Vo-bHx"/>
+                        <outletCollection property="btnList" destination="XRB-Us-DEs" collectionClass="NSMutableArray" id="p0g-Zj-buc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -480,7 +485,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x79-dl-Rfj">
-                                <rect key="frame" x="3" y="91" width="408" height="634"/>
+                                <rect key="frame" x="3" y="47" width="408" height="678"/>
                                 <color key="backgroundColor" red="0.98709231615066528" green="0.99124234914779663" blue="0.99524778127670288" alpha="0.098592679794520549" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEO-a8-1E2">
                                     <size key="itemSize" width="126" height="126"/>
@@ -543,7 +548,6 @@
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ZM5-w6-d5b"/>
-                                            <constraint firstAttribute="width" constant="137" id="hVF-3G-OOF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -563,6 +567,7 @@
                                     <constraint firstItem="88n-GD-DlB" firstAttribute="leading" secondItem="aBW-l4-D0N" secondAttribute="trailing" constant="84" id="jfS-sS-pWO"/>
                                     <constraint firstAttribute="height" constant="128" id="kED-5H-tOU"/>
                                     <constraint firstItem="aBW-l4-D0N" firstAttribute="top" secondItem="Oof-3p-w4h" secondAttribute="top" constant="39" id="knW-ic-wxE"/>
+                                    <constraint firstItem="88n-GD-DlB" firstAttribute="width" secondItem="aBW-l4-D0N" secondAttribute="width" id="lvy-XW-gHl"/>
                                     <constraint firstItem="88n-GD-DlB" firstAttribute="top" secondItem="Oof-3p-w4h" secondAttribute="top" constant="39" id="ncr-hR-dpz"/>
                                     <constraint firstItem="aBW-l4-D0N" firstAttribute="leading" secondItem="Oof-3p-w4h" secondAttribute="leading" constant="25" id="q4t-xP-Rgc"/>
                                 </constraints>

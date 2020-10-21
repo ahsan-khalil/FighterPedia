@@ -22,11 +22,11 @@ class ViewController: UIViewController {
         FighterRepository.displayData()
         // Do any additional setup after loading the view.
         for btn in btnList {
-            btn.layer.cornerRadius  = 10
+            btn.layer.cornerRadius  = 5
         }
         
         labelTitle.layer.masksToBounds = true
-        labelTitle.layer.cornerRadius = 10
+        labelTitle.layer.cornerRadius = 5
     }
     
     @IBAction func onClickEras(_ sender: Any) {
