@@ -74,15 +74,8 @@ class FighterDetailViewController: UIViewController {
     @IBOutlet weak var fighterPicsCollectionView:FighterPicsCollection!
     @IBOutlet weak var FighterOperatorsCollectionView: FighterOperatorsCollection!
     
-    
-    
-    
-    
-   
     @IBOutlet weak var viewFighterInfoBG: UIView!
     @IBOutlet var btnCollection: [UIButton]!
-    
-    
     
     var selectedFighter:FighterModel!
     
@@ -110,10 +103,8 @@ class FighterDetailViewController: UIViewController {
         
         fighterPicsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
         FighterOperatorsCollectionView.register(ImageSliderCollectionViewCell.nib(), forCellWithReuseIdentifier: ImageSliderCollectionViewCell.identifier)
-        
-        
+
         fighterPicsCollectionView.configure(list: selectedFighter.picturesList)
-        
         FighterOperatorsCollectionView.configure(list: selectedFighter.getFlagList())
         
         
@@ -126,9 +117,6 @@ class FighterDetailViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }else{
             navigationItem.title = selectedFighter.flightname
-            
-            
-            
             navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle.fill") , style: .plain, target: self, action: #selector(moreInfo))
         }
         
@@ -197,5 +185,18 @@ extension FighterDetailViewController:UICollectionViewDataSource,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("you touched me \(indexPath.row)")
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == fighterPicsCollectionView {
+            let width = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right  - collectionView.safeAreaInsets.left - 10
+            
+            let height = collectionView.frame.height - collectionView.contentInset.top - collectionView.contentInset.bottom - collectionView.safeAreaInsets.top - 10
+            
+            return CGSize(width: width, height: height)
+        } else {
+            return CGSize(width: 32, height: 32)
+        }
+    }
+    
     
 }
