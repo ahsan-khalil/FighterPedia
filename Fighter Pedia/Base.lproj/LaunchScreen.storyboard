@@ -16,14 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="07y-s5-v07">
-                                <rect key="frame" x="87" y="347" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="bYf-Xb-CYX"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGl-LA-Huv">
-                                <rect key="frame" x="100" y="483" width="214" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGl-LA-Huv">
+                                <rect key="frame" x="103" y="520" width="208.5" height="67"/>
                                 <color key="backgroundColor" red="0.12398622184991837" green="0.080905236303806305" blue="0.41501793265342712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="BZq-hK-F9V"/>
@@ -34,16 +28,20 @@
                                 <color key="shadowColor" red="0.083612166345119476" green="0.36970680952072144" blue="0.34659603238105774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="4" height="2"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="07y-s5-v07">
+                                <rect key="frame" x="-113" y="384" width="640" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="bYf-Xb-CYX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.064676895740000004" green="0.046411909160000001" blue="0.17396223550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="07y-s5-v07" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="HHY-mE-fc3"/>
+                            <constraint firstItem="07y-s5-v07" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8B5-pb-7n4"/>
                             <constraint firstItem="gGl-LA-Huv" firstAttribute="top" secondItem="07y-s5-v07" secondAttribute="bottom" constant="8" symbolic="YES" id="Lpw-Ee-bo7"/>
-                            <constraint firstItem="07y-s5-v07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="VG5-5K-Gv9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07y-s5-v07" secondAttribute="trailing" constant="87" id="a2K-3f-V24"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gGl-LA-Huv" secondAttribute="trailing" constant="100" id="ica-0D-fiM"/>
-                            <constraint firstItem="gGl-LA-Huv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xJl-W0-wHF"/>
+                            <constraint firstItem="07y-s5-v07" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Rec-aW-3vS"/>
+                            <constraint firstItem="gGl-LA-Huv" firstAttribute="centerX" secondItem="07y-s5-v07" secondAttribute="centerX" id="a2o-I9-uWw"/>
                         </constraints>
                     </view>
                 </viewController>
