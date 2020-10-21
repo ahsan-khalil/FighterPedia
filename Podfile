@@ -7,4 +7,5 @@ target 'Fighter Pedia' do
 
   # Pods for Fighter Pedia
   pod 'DatePicker', '~> 1.3.0'
+  pod 'SwiftLint'
 end
