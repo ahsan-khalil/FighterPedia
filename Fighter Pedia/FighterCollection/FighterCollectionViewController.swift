@@ -51,7 +51,8 @@ extension FighterCollectionViewController: UICollectionViewDelegate,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width - 30, height: 300)
+        let width = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right - collectionView.safeAreaInsets.left - 30
+        return CGSize(width: width, height: 300)
         }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedFighter = self.flightList[indexPath.row]
