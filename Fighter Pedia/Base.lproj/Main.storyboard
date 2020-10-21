@@ -661,7 +661,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FighterPedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-S8-3AY">
-                                <rect key="frame" x="99.5" y="128" width="215" height="60"/>
+                                <rect key="frame" x="20" y="128" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.96592551469999999" green="0.98531264070000002" blue="0.98845762010000005" alpha="0.046714469180000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="c3P-c5-sbh"/>
@@ -687,7 +687,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-TO-NEy">
-                                <rect key="frame" x="98" y="498" width="218" height="60"/>
+                                <rect key="frame" x="97.5" y="498" width="219" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8lI-BQ-WU0"/>
@@ -710,8 +710,11 @@
                             <constraint firstItem="wbr-ye-ZiX" firstAttribute="centerY" secondItem="jwV-Gb-6U7" secondAttribute="centerY" id="4bz-gJ-ahg"/>
                             <constraint firstItem="xOP-TO-NEy" firstAttribute="centerX" secondItem="jwV-Gb-6U7" secondAttribute="centerX" id="C5T-i8-q8R"/>
                             <constraint firstItem="xOP-TO-NEy" firstAttribute="top" secondItem="wbr-ye-ZiX" secondAttribute="bottom" constant="20" id="TTj-5E-8x6"/>
+                            <constraint firstItem="hkh-S8-3AY" firstAttribute="leading" relation="lessThanOrEqual" secondItem="sRE-jS-B4z" secondAttribute="leading" constant="20" id="dWk-vp-Oa6"/>
+                            <constraint firstItem="xOP-TO-NEy" firstAttribute="width" secondItem="wbr-ye-ZiX" secondAttribute="width" id="ozu-N7-KQc"/>
                             <constraint firstItem="hkh-S8-3AY" firstAttribute="top" secondItem="sRE-jS-B4z" secondAttribute="top" constant="40" id="r2V-56-M5s"/>
                             <constraint firstItem="hkh-S8-3AY" firstAttribute="centerX" secondItem="jwV-Gb-6U7" secondAttribute="centerX" id="uXp-Wu-Y7b"/>
+                            <constraint firstItem="sRE-jS-B4z" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hkh-S8-3AY" secondAttribute="trailing" constant="20" id="ysI-LK-S9W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="jFH-YP-Tfm">
