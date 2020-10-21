@@ -13,16 +13,13 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ErasTableViewCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ErasTableViewCell" id="KGk-i7-Jjw" customClass="ErasTableViewCell" customModule="Fighter_Pedia" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1900 - 1910" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNB-AQ-ANi">
-                        <rect key="frame" x="55" y="8" width="200" height="28"/>
+                        <rect key="frame" x="55" y="8" width="210" height="28"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="200" id="32M-J0-P5H"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,8 +27,8 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="WNB-AQ-ANi" secondAttribute="trailing" constant="55" id="5RW-Xl-XWv"/>
-                    <constraint firstItem="WNB-AQ-ANi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="U09-TA-9oj"/>
+                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WNB-AQ-ANi" secondAttribute="trailing" constant="55" id="5RW-Xl-XWv"/>
+                    <constraint firstItem="WNB-AQ-ANi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="U09-TA-9oj"/>
                     <constraint firstAttribute="bottom" secondItem="WNB-AQ-ANi" secondAttribute="bottom" constant="8" id="ZeD-ye-3kA"/>
                     <constraint firstItem="WNB-AQ-ANi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="sSQ-AT-P0O"/>
                 </constraints>
