@@ -6,9 +6,7 @@
 //
 
 import Foundation
-
 struct ErasYearRangeModel {
-    var StartYear:Int
-    var EndYear:Int
+    var startYear: Int
+    var endYear: Int
 }
-

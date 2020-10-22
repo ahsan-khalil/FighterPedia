@@ -7,8 +7,7 @@
 
 import Foundation
 import UIKit
-
 struct ImageDataContainer {
-    var img:String
-    var uiImage:UIImage
+    var img: String
+    var uiImage: UIImage
 }

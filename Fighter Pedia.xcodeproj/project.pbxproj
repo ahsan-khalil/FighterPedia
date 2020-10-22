@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -139,6 +139,7 @@
 		8BA40597252762C600405482 /* CharacteristicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BA40598252762C600405482 /* CharacteristicsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicsCollectionViewCell.xib; sourceTree = "<group>"; };
 		8BA405A22527791C00405482 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		8BBA1EA025406B97000C87F6 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		8BC0C45C252AF4B30075F7E1 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		8BC0C45F252B06BE0075F7E1 /* FighterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterRepository.swift; sourceTree = "<group>"; };
 		8BC0C462252B2BF40075F7E1 /* EarsRangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarsRangeModel.swift; sourceTree = "<group>"; };
@@ -389,6 +390,7 @@
 		F41EA7A08D5785F94D8738EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BBA1EA025406B97000C87F6 /* .swiftlint.yml */,
 				8B960482253DE1DB00A8D549 /* Colander.framework */,
 				8B960484253DE1DB00A8D549 /* Pods_Fighter_Pedia.framework */,
 				8B960486253DE1DB00A8D549 /* SnapKit.framework */,
@@ -407,6 +409,7 @@
 			buildConfigurationList = 8B3D0B2025231B8500E3408C /* Build configuration list for PBXNativeTarget "Fighter Pedia" */;
 			buildPhases = (
 				F5AECC86F4666A0DF9B6B675 /* [CP] Check Pods Manifest.lock */,
+				8BBA1F24254193CE000C87F6 /* ShellScript */,
 				8B3D0B0825231B8400E3408C /* Sources */,
 				8B3D0B0925231B8400E3408C /* Frameworks */,
 				8B3D0B0A25231B8400E3408C /* Resources */,
@@ -475,6 +478,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8BBA1F24254193CE000C87F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		950BB6CF2E753EA1E2ADDF4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

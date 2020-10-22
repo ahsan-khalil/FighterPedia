@@ -8,28 +8,18 @@
 import UIKit
 
 class ImageSliderCollectionViewCell: UICollectionViewCell {
-
     static let identifier = "ImageSliderCollectionViewCell"
-    
     @IBOutlet weak var image: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
-    
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    
-    func configure(image:String){
+    func configure(image: String) {
         self.image.image = UIImage(named: image)
     }
-    
-    func configure(image:UIImage){
+    func configure(image: UIImage) {
         self.image.image = image
     }
-    
-
 }

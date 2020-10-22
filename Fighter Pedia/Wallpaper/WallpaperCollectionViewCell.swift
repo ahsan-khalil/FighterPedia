@@ -9,12 +9,8 @@ import UIKit
 
 class WallpaperCollectionViewCell: UICollectionViewCell {
     static let identifier =  "wallpaperCollectionViewCell"
-    
     @IBOutlet weak var imgWallpaper: UIImageView!
-    
-    func configure(imageStr:String){
+    func configure(imageStr: String) {
         imgWallpaper.image = UIImage(named: imageStr)
     }
-    
-    
 }
